@@ -56,27 +56,30 @@
 <section class="row mx-0">
     <ul class="nav nav-tabs nav-fill px-1" role="tablist">
         <li class="nav-item" role="presentation">
-            <a class="nav-link active" role="tab" data-toggle="pill"
+            <a id="respikar-day-tab" class="nav-link active" role="tab" data-toggle="pill"
                href="#respikar-day" aria-selected="true">Day</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" role="tab" data-toggle="pill"
+            <a id="respikar-week-tab" class="nav-link" role="tab" data-toggle="pill"
                href="#respikar-week" aria-selected="false">Week</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" role="tab" data-toggle="pill"
+            <a id="respikar-month-tab" class="nav-link" role="tab" data-toggle="pill"
                href="#respikar-month" aria-selected="false">Month</a>
         </li>
     </ul>
 
     <div class="tab-content">
-        <section id="respikar-day" class="tab-pane fade show active" role="tabpanel">
+        <section id="respikar-day" class="tab-pane fade show active" role="tabpanel"
+                 aria-labelledby="respikar-day-tab">
             <p>Day</p>
         </section>
-        <section id="respikar-week" class="tab-pane fade" role="tabpanel">
+        <section id="respikar-week" class="tab-pane fade" role="tabpanel"
+                 aria-labelledby="respikar-week-tab">
             <p>Week</p>
         </section>
-        <section id="respikar-month" class="tab-pane fade" role="tabpanel">
+        <section id="respikar-month" class="tab-pane fade" role="tabpanel"
+                 aria-labelledby="respikar-month-tab">
             <p>Month</p>
         </section>
     </div>
