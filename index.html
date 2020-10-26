@@ -53,22 +53,22 @@
      no sensible way to map this sort of construct to a standard WAI ARIA
      pattern, meaning that it cannot be easily made understandable to users
      of assistive technologies.-->
-<section class="row mx-0">
+<section class="row mx-0 bg-dark">
     <ul class="nav nav-tabs nav-fill px-1" role="tablist">
         <li class="nav-item" role="presentation">
             <a id="respikar-day-tab" class="nav-link active" role="tab" data-toggle="pill"
                href="#respikar-day-content" aria-selected="true"
-               aria-controls="respikar-day-content">Day</a>
+               aria-controls="respikar-day-content" style="border-radius: 30px 30px 0 0">Day</a>
         </li>
         <li class="nav-item" role="presentation">
             <a id="respikar-week-tab" class="nav-link" role="tab" data-toggle="pill"
                href="#respikar-week-content" aria-selected="false"
-               aria-controls="respikar-week-content">Week</a>
+               aria-controls="respikar-week-content" style="border-radius: 30px 30px 0 0">Week</a>
         </li>
         <li class="nav-item" role="presentation">
             <a id="respikar-month-tab" class="nav-link" role="tab" data-toggle="pill"
                href="#respikar-month-content" aria-selected="false"
-               aria-controls="respikar-month-content">Month</a>
+               aria-controls="respikar-month-content" style="border-radius: 30px 30px 0 0">Month</a>
         </li>
     </ul>
 
@@ -81,7 +81,7 @@
          With canvas, the accessibility has to be added with ARIA attributes
          on the canvas element or added using internal fallback content placed
          within the opening and closing canvas tags. -->
-    <div class="tab-content">
+    <div class="tab-content bg-light">
         <section id="respikar-day-content" class="tab-pane fade show active" role="tabpanel"
                  aria-labelledby="respikar-day-tab">
             <h4 class="mt-4 font-weight-bold text-center">Daily Statistics</h4>
