@@ -9,6 +9,10 @@
     <title>Respikar</title>
 
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/Calendar.css">
+
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/vendor/moment.js"></script>
 </head>
 <!-- Needed for the Sticky Bottom Footer -->
 <body class="d-flex flex-column h-100">
@@ -41,6 +45,8 @@
     </div>
 </nav>
 
+<div class="daterange daterange--single"></div>
+
 <section class="row mx-0 bg-light py-2" style="border-radius: 30px 0 0 0">
     <p class="text-center text-muted">Copyright &copy; 2020. J & J</p>
 </section>
@@ -55,6 +61,21 @@
 </footer>
 
 <script src="../js/bootstrap.bundle.js"></script>
+<script type="module" src="../js/Calendar.js"></script>
+<script type="module">
+    import {Calendar} from '../js/Calendar.js'
+
+    new Calendar({
+        element: $('.daterange--single'),
+        format: {input: 'M/D/YYYY'},
+        placeholder: 'Select a Date',
+        required: false,
+        callback: function () {
+            console.log('Single calendar callback triggered');
+        }
+    });
+
+</script>
 
 </body>
 </html>
