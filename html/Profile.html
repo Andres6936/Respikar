@@ -9,10 +9,6 @@
     <title>Respikar</title>
 
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/Calendar.css">
-
-    <script src="../js/vendor/jquery.js"></script>
-    <script src="../js/vendor/moment.js"></script>
 </head>
 <!-- Needed for the Sticky Bottom Footer -->
 <body class="d-flex flex-column h-100">
@@ -45,14 +41,6 @@
     </div>
 </nav>
 
-<div class="daterange daterange--single p-2"></div>
-
-<div class="row p-4">
-    <div class="rounded-pill bg-light border">
-        <p class="text-center py-2 m-0">12/10/2020<br>Santiago de Cali, Colombia</p>
-    </div>
-</div>
-
 <section class="row mx-0 bg-light py-2" style="border-radius: 30px 0 0 0">
     <p class="text-center text-muted">Copyright &copy; 2020. J & J</p>
 </section>
@@ -60,29 +48,13 @@
 <footer class="bg-light mt-auto py-2 border-top fixed-bottom">
     <div class="container mx-0 row row-cols-4 gx-5">
         <a class="col" href="../index.html"><img src="../img/svg/Smock_Home_18_N.svg" class="h-100" alt="Home"></a>
-        <a class="col" href="#"><img src="../img/svg/Smock_Calendar_18_N.svg" class="h-100" alt="Calendar"></a>
+        <a class="col" href="../html/Calendar.html"><img src="../img/svg/Smock_Calendar_18_N.svg" class="h-100"
+                                                         alt="Calendar"></a>
         <a class="col" href="#"><img src="../img/svg/Smock_GraphDonut_18_N.svg" class="h-100" alt="Graph"></a>
-        <a class="col" href="Profile.html"><img src="../img/svg/Smock_Settings_18_N.svg" class="h-100"
-                                                alt="Settings"></a>
+        <a class="col" href="#"><img src="../img/svg/Smock_Settings_18_N.svg" class="h-100" alt="Settings"></a>
     </div>
 </footer>
 
 <script src="../js/bootstrap.bundle.js"></script>
-<script type="module" src="../js/Calendar.js"></script>
-<script type="module">
-    import {Calendar} from '../js/Calendar.js'
-
-    new Calendar({
-        element: $('.daterange--single'),
-        format: {input: 'M/D/YYYY'},
-        placeholder: 'Select a Date',
-        required: false,
-        callback: function () {
-            console.log('Single calendar callback triggered');
-        }
-    });
-
-</script>
-
 </body>
 </html>
