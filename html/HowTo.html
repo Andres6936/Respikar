@@ -45,15 +45,6 @@
     </div>
 </nav>
 
-<div class="daterange daterange--single p-2"></div>
-
-<div class="row p-4">
-    <div class="rounded-pill bg-light border px-4">
-        <p class="pt-2 m-0 text-muted" style="font-size: smaller">12 Nov, 2020</p>
-        <p class="font-weight-bold">Santiago de Cali, Colombia</p>
-    </div>
-</div>
-
 <section class="row mx-0 bg-light py-2" style="border-radius: 30px 0 0 0">
     <p class="text-center text-muted">Copyright &copy; 2020. J & J</p>
 </section>
@@ -62,28 +53,13 @@
     <div class="container mx-0 row row-cols-4 gx-5">
         <a class="col" href="../index.html"><img src="../img/svg/Smock_Home_18_N.svg" class="h-100" alt="Home"></a>
         <a class="col" href="#"><img src="../img/svg/Smock_Calendar_18_N.svg" class="h-100" alt="Calendar"></a>
-        <a class="col" href="HowTo.html"><img src="../img/svg/Smock_GraphDonut_18_N.svg" class="h-100" alt="Graph"></a>
+        <a class="col" href="#"><img src="../img/svg/Smock_GraphDonut_18_N.svg" class="h-100" alt="Graph"></a>
         <a class="col" href="Profile.html"><img src="../img/svg/Smock_Settings_18_N.svg" class="h-100"
                                                 alt="Settings"></a>
     </div>
 </footer>
 
 <script src="../js/bootstrap.bundle.js"></script>
-<script type="module" src="../js/Calendar.js"></script>
-<script type="module">
-    import {Calendar} from '../js/Calendar.js'
-
-    new Calendar({
-        element: $('.daterange--single'),
-        format: {input: 'M/D/YYYY'},
-        placeholder: 'Select a Date',
-        required: false,
-        callback: function () {
-            console.log('Single calendar callback triggered');
-        }
-    });
-
-</script>
 
 </body>
 </html>
