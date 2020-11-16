@@ -1,24 +1,18 @@
-body {
+.ac-clock-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 .clock {
     border-radius: 100%;
-    background: #ffffff;
-    font-family: "Montserrat";
-    border: 5px solid white;
     box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .wrap {
-    overflow: hidden;
     position: relative;
     width: 350px;
     height: 350px;
-    border-radius: 100%;
 }
 
 .minute,
