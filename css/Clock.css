@@ -9,6 +9,9 @@
     box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
+/* Then we are setting position: relative. Because we are going to absolutely
+ position everything relative to our clock <div>. All the hands and other
+ stuff. So this line is important.*/
 .wrap {
     position: relative;
     width: 350px;
