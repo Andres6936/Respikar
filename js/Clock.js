@@ -34,19 +34,27 @@ secondAnalogClock.style.height = String(SIZE_SECOND_ELEMENT) + 'px';
 clock();
 
 function clock() {
-    const date = new Date();
+    // get the current Date object from which we can obtain the current hour, minute and second
+    const currentDate = new Date();
 
-    const hours = ((date.getHours() + 11) % 12 + 1);
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+    // get the hours, minutes and seconds
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
 
-    const hour = hours * 30;
-    const minute = minutes * 6;
-    const second = seconds * 6;
+    // rotating fraction --> how many fraction to rotate for each hand.
+    const secondsFraction = seconds / 60;
+    const minutesFraction = (secondsFraction + minutes) / 60;
+    const hoursFraction = (minutesFraction + hours) / 12;
 
-    document.querySelector('.hour').style.transform = `rotate(${hour}deg)`
-    document.querySelector('.minute').style.transform = `rotate(${minute}deg)`
-    document.querySelector('.second').style.transform = `rotate(${second}deg)`
+    // actual deg to rotate
+    const secondsRotate = secondsFraction * 360;
+    const minutesRotate = minutesFraction * 360;
+    const hoursRotate = hoursFraction * 360;
+
+    document.querySelector('.hour').style.transform = `rotate(${hoursRotate}deg)`
+    document.querySelector('.minute').style.transform = `rotate(${minutesRotate}deg)`
+    document.querySelector('.second').style.transform = `rotate(${secondsRotate}deg)`
 }
 
 setInterval(clock, inc);
