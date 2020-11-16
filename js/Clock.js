@@ -52,6 +52,8 @@ function clock() {
     const minutesRotate = minutesFraction * 360;
     const hoursRotate = hoursFraction * 360;
 
+    // apply the rotate style to each element
+    // use backtick `` instead of single quotes ''
     document.querySelector('.hour').style.transform = `rotate(${hoursRotate}deg)`
     document.querySelector('.minute').style.transform = `rotate(${minutesRotate}deg)`
     document.querySelector('.second').style.transform = `rotate(${secondsRotate}deg)`
