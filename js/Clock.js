@@ -55,9 +55,9 @@ function clock() {
 
     // apply the rotate style to each element
     // use backtick `` instead of single quotes ''
-    document.querySelector('.hour').style.transform = `rotate(${hoursRotate}deg)`
-    document.querySelector('.minute').style.transform = `rotate(${minutesRotate}deg)`
-    document.querySelector('.second').style.transform = `rotate(${secondsRotate}deg)`
+    hourAnalogClock.style.transform = `rotate(${hoursRotate}deg)`
+    minuteAnalogClock.style.transform = `rotate(${minutesRotate}deg)`
+    secondAnalogClock.style.transform = `rotate(${secondsRotate}deg)`
 }
 
 // for every 1000 milliseconds(ie, 1 second) interval, activate the rotate() function.
