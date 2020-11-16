@@ -1,4 +1,27 @@
-var inc = 1000;
+const inc = 1000;
+
+const WINDOW_WIDTH = window.screen.width;
+
+const wrapAnalogClock = document.querySelector('.wrap');
+const SIZE_WRAP_ELEMENT = WINDOW_WIDTH * 0.9;
+
+wrapAnalogClock.style.width = String(SIZE_WRAP_ELEMENT) + 'px';
+wrapAnalogClock.style.height = String(SIZE_WRAP_ELEMENT) + 'px';
+
+const hourAnalogClock = document.querySelector('.hour');
+const SIZE_HOUR_ELEMENT = SIZE_WRAP_ELEMENT / 3.5;
+
+hourAnalogClock.style.height = String(SIZE_HOUR_ELEMENT) + 'px';
+
+const minuteAnalogClock = document.querySelector('.minute');
+const SIZE_MINUTE_ELEMENT = SIZE_WRAP_ELEMENT / 2.692307692;
+
+minuteAnalogClock.style.height = String(SIZE_MINUTE_ELEMENT) + 'px';
+
+const secondAnalogClock = document.querySelector('.second');
+const SIZE_SECOND_ELEMENT = SIZE_WRAP_ELEMENT / 3.888888889;
+
+secondAnalogClock.style.height = String(SIZE_SECOND_ELEMENT) + 'px';
 
 clock();
 
