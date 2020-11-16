@@ -59,4 +59,5 @@ function clock() {
     document.querySelector('.second').style.transform = `rotate(${secondsRotate}deg)`
 }
 
+// for every 1000 milliseconds(ie, 1 second) interval, activate the rotate() function.
 setInterval(clock, inc);
