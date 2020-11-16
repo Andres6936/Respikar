@@ -47,7 +47,8 @@ function clock() {
     const minutesFraction = (secondsFraction + minutes) / 60;
     const hoursFraction = (minutesFraction + hours) / 12;
 
-    // actual deg to rotate
+    // Then we are multiplying each fraction with 360 to get the actual degree
+    // to rotate for each hand. (Why 360? Because 360 degree makes the circle).
     const secondsRotate = secondsFraction * 360;
     const minutesRotate = minutesFraction * 360;
     const hoursRotate = hoursFraction * 360;
