@@ -53,6 +53,25 @@
     </label>
 </div>
 
+<section class="container-fluid my-3">
+    <div class="row row-cols-3 border-bottom border-top align-items-center py-2">
+        <div class="col-4">
+            <p class="text-center font-weight-bold mb-0">8:00<span class="text-muted ml-3">A.M</span></p>
+        </div>
+
+        <div class="col-6">
+            <p class="text-center small text-muted font-weight-bold mb-0">Every day</p>
+        </div>
+
+        <!-- Bootstrap 5 docs says: Without labels - Omit the wrapping .form-check
+             for checkboxes and radios that have no label text. -->
+        <div class="col-2 form-switch">
+            <input class="form-check-input" type="checkbox" value="" aria-label="Activate or Deactivate the alarm"
+                   checked>
+        </div>
+    </div>
+</section>
+
 <section class="container-fluid p-4">
     <div class="row border rounded-pill bg-light px-4">
         <div class="col-12">
