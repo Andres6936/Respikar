@@ -3,7 +3,7 @@ const inc = 1000;
 const WINDOW_WIDTH = document.documentElement.clientWidth;
 
 const wrapAnalogClock = document.querySelector('.wrap');
-const SIZE_WRAP_ELEMENT = WINDOW_WIDTH * 0.9;
+const SIZE_WRAP_ELEMENT = WINDOW_WIDTH * 0.6;
 
 wrapAnalogClock.style.width = String(SIZE_WRAP_ELEMENT) + 'px';
 wrapAnalogClock.style.height = String(SIZE_WRAP_ELEMENT) + 'px';
