@@ -26,30 +26,33 @@ export class AnalogClock {
     }
 
     animate() {
-        // get the current Date object from which we can obtain the current hour, minute and second
-        const currentDate = new Date();
+        // for every 1000 milliseconds(ie, 1 second) interval, activate the rotate() function.
+        setInterval(() => {
+            // get the current Date object from which we can obtain the current hour, minute and second
+            const currentDate = new Date();
 
-        // get the hours, minutes and seconds
-        const hours = currentDate.getHours();
-        const minutes = currentDate.getMinutes();
-        const seconds = currentDate.getSeconds();
+            // get the hours, minutes and seconds
+            const hours = currentDate.getHours();
+            const minutes = currentDate.getMinutes();
+            const seconds = currentDate.getSeconds();
 
-        // rotating fraction --> how many fraction to rotate for each hand.
-        const secondsFraction = seconds / 60;
-        const minutesFraction = (secondsFraction + minutes) / 60;
-        const hoursFraction = (minutesFraction + hours) / 12;
+            // rotating fraction --> how many fraction to rotate for each hand.
+            const secondsFraction = seconds / 60;
+            const minutesFraction = (secondsFraction + minutes) / 60;
+            const hoursFraction = (minutesFraction + hours) / 12;
 
-        // Then we are multiplying each fraction with 360 to get the actual degree
-        // to rotate for each hand. (Why 360? Because 360 degree makes the circle).
-        const secondsRotate = secondsFraction * 360;
-        const minutesRotate = minutesFraction * 360;
-        const hoursRotate = hoursFraction * 360;
+            // Then we are multiplying each fraction with 360 to get the actual degree
+            // to rotate for each hand. (Why 360? Because 360 degree makes the circle).
+            const secondsRotate = secondsFraction * 360;
+            const minutesRotate = minutesFraction * 360;
+            const hoursRotate = hoursFraction * 360;
 
-        // apply the rotate style to each element
-        // use backtick `` instead of single quotes ''
-        this.hourAnalogClock.style.transform = `rotate(${hoursRotate}deg)`
-        this.minuteAnalogClock.style.transform = `rotate(${minutesRotate}deg)`
-        this.secondAnalogClock.style.transform = `rotate(${secondsRotate}deg)`
+            // apply the rotate style to each element
+            // use backtick `` instead of single quotes ''
+            this.hourAnalogClock.style.transform = `rotate(${hoursRotate}deg)`;
+            this.minuteAnalogClock.style.transform = `rotate(${minutesRotate}deg)`;
+            this.secondAnalogClock.style.transform = `rotate(${secondsRotate}deg)`;
+        }, 1000);
     }
 
     // @type{number} Determine how much space is available within the browser window.
@@ -74,7 +77,4 @@ export class AnalogClock {
     }
 }
 
-const clock = new AnalogClock();
-
-// for every 1000 milliseconds(ie, 1 second) interval, activate the rotate() function.
-setInterval(clock.animate, 1000);
+new AnalogClock().animate();
