@@ -1,11 +1,15 @@
 export class AnalogClock {
 
     constructor() {
-        const wrapAnalogClock = document.querySelector('.wrap');
-
         this.hourAnalogClock = document.querySelector('.hour');
         this.minuteAnalogClock = document.querySelector('.minute');
         this.secondAnalogClock = document.querySelector('.second');
+
+        this.updateSizeElements();
+    }
+
+    updateSizeElements() {
+        const wrapAnalogClock = document.querySelector('.wrap');
 
         const SIZE_WRAP_ELEMENT = this.windowWidth() * this.PROPORTION_WITH_BROWSER_WINDOW;
 
