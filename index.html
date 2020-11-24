@@ -8,8 +8,10 @@
 
     <title>Respikar</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="icon" sizes="200x200" href="/img/png/Logo.png">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/loading-bar.css">
 </head>
 <!-- Needed for the Sticky Bottom Footer -->
 <body class="d-flex flex-column h-100">
@@ -114,19 +116,14 @@
 
 <div class="container bg-light py-4 text-center">
     <div class="row row-cols-2 g-1">
-        <div class="col bg-white border p-2" style="position: relative">
-            <canvas id="rp-completed-doughnut" class="container" height="72px" width="72px" role="img"></canvas>
-            <p class="h1" style="position: absolute; top: 43%; left: 40%">69</p>
-        </div>
-        <div class="col bg-white border p-2">
-            <canvas id="rp-rejected-doughnut" class="container" height="72px" width="72px" role="img"></canvas>
-        </div>
-        <div class="col bg-white border p-2">
-            <canvas id="rp-missing-doughnut" class="container" height="72px" width="72px" role="img"></canvas>
-        </div>
-        <div class="col bg-white border p-2">
-            <canvas id="rp-next-month-doughnut" class="container" height="72px" width="72px" role="img"></canvas>
-        </div>
+        <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
+             data-stroke="#198754" data-value="69" data-stroke-width="10"></div>
+        <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
+             data-stroke="#dc3545" data-value="69" data-stroke-width="10"></div>
+        <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
+             data-stroke="#ffc107" data-value="69" data-stroke-width="10"></div>
+        <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
+             data-stroke="#0d6efd" data-value="69" data-stroke-width="10"></div>
     </div>
 </div>
 
@@ -147,6 +144,7 @@
 
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/Chart.bundle.js"></script>
+<script src="/js/loading-bar.js"></script>
 <script>
 
     // Execute the script after page load.
@@ -191,61 +189,6 @@
         }
     });
 
-    let doughnutCompleted = document.getElementById('rp-completed-doughnut');
-    let doughnutCompletedChart = new Chart(doughnutCompleted, {
-        type: "doughnut",
-        data: {
-            datasets: [{
-                label: 'Completed',
-                data: [69, 31],
-                backgroundColor: [
-                    '#198754'
-                ],
-            }]
-        },
-    });
-
-    let doughnutRejected = document.getElementById('rp-rejected-doughnut');
-    let doughnutRejectedChart = new Chart(doughnutRejected, {
-        type: "doughnut",
-        data: {
-            datasets: [{
-                label: 'Completed',
-                data: [69, 31],
-                backgroundColor: [
-                    '#dc3545'
-                ],
-            }]
-        },
-    });
-
-    let doughnutMissing = document.getElementById('rp-missing-doughnut');
-    let doughnutMissingChart = new Chart(doughnutMissing, {
-        type: "doughnut",
-        data: {
-            datasets: [{
-                label: 'Completed',
-                data: [69, 31],
-                backgroundColor: [
-                    '#ffc107'
-                ],
-            }]
-        },
-    });
-
-    let doughnutNextMonth = document.getElementById('rp-next-month-doughnut');
-    let doughnutNextMonthChart = new Chart(doughnutNextMonth, {
-        type: "doughnut",
-        data: {
-            datasets: [{
-                label: 'Completed',
-                data: [69, 31],
-                backgroundColor: [
-                    '#0d6efd'
-                ],
-            }]
-        },
-    });
 </script>
 </body>
 </html>
