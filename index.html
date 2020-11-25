@@ -50,74 +50,19 @@
     </div>
 </nav>
 
-<!-- Dynamic tabbed interfaces, as described in the WAI ARIA Authoring
-     Practices, require role="tablist", role="tab", role="tabpanel", and
-     additional aria- attributes in order to convey their structure,
-     functionality and current state to users of assistive technologies
-     (such as screen readers).
-
-     Note that dynamic tabbed interfaces should not contain dropdown menus,
-     as this causes both usability and accessibility issues. From a usability
-     perspective, the fact that the currently displayed tab’s trigger element
-     is not immediately visible (as it’s inside the closed dropdown menu) can
-     cause confusion. From an accessibility point of view, there is currently
-     no sensible way to map this sort of construct to a standard WAI ARIA
-     pattern, meaning that it cannot be easily made understandable to users
-     of assistive technologies.-->
-<section class="row mx-0 bg-light">
-    <ul class="nav nav-tabs nav-fill px-1" role="tablist">
-        <li class="nav-item" role="presentation">
-            <!-- The border-radius property can have from one to four values.
-                 Here are the rules:
-                 Four values - border-radius: 15px 50px 30px 5px; (first value
-                 applies to top-left corner, second value applies to top-right
-                 corner, third value applies to bottom-right corner, and fourth
-                 value applies to bottom-left corner):  -->
-            <a id="respikar-day-tab" class="nav-link active" role="tab" data-toggle="pill"
-               href="#respikar-day-content" aria-selected="true"
-               aria-controls="respikar-day-content">Day</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a id="respikar-week-tab" class="nav-link" role="tab" data-toggle="pill"
-               href="#respikar-week-content" aria-selected="false"
-               aria-controls="respikar-week-content">Week</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a id="respikar-month-tab" class="nav-link" role="tab" data-toggle="pill"
-               href="#respikar-month-content" aria-selected="false"
-               aria-controls="respikar-month-content">Month</a>
-        </li>
-    </ul>
-
+<section class="row mx-0 pb-5" style="background: linear-gradient(90deg, #0c2646 0, #204065 60%, #2a5788)">
     <!-- Chart.js charts are rendered on user provided canvas elements. Thus,
-         it is up to the user to create the canvas element in a way that is
-         accessible. The canvas element has support in all browsers and will
-         render on screen but the canvas content will not be accessible to
-         screen readers.
+        it is up to the user to create the canvas element in a way that is
+        accessible. The canvas element has support in all browsers and will
+        render on screen but the canvas content will not be accessible to
+        screen readers.
 
-         With canvas, the accessibility has to be added with ARIA attributes
-         on the canvas element or added using internal fallback content placed
-         within the opening and closing canvas tags. -->
-    <div class="tab-content bg-white pb-4" style="border-radius: 0 0 30px 0">
-        <section id="respikar-day-content" class="tab-pane fade show active" role="tabpanel"
-                 aria-labelledby="respikar-day-tab">
-            <h4 class="mt-4 font-weight-bold text-center">Daily Statistics</h4>
-            <canvas id="respikar-day-chart" class="container border rounded-lg py-3" height="300px"
-                    aria-label="Chart for Day Statistics" role="img"></canvas>
-        </section>
-        <section id="respikar-week-content" class="tab-pane fade" role="tabpanel"
-                 aria-labelledby="respikar-week-tab">
-            <h4 class="mt-4 font-weight-bold text-center">Week Statistics</h4>
-            <canvas id="respikar-week-chart" class="container border rounded-lg py-3" height="300px"
-                    aria-label="Chart for Week Statistics" role="img"></canvas>
-        </section>
-        <section id="respikar-month-content" class="tab-pane fade" role="tabpanel"
-                 aria-labelledby="respikar-month-tab">
-            <h4 class="mt-4 font-weight-bold text-center">Month Statistics</h4>
-            <canvas id="respikar-month-chart" class="container border rounded-lg py-3" height="300px"
-                    aria-label="Chart for Month Statistics" role="img"></canvas>
-        </section>
-    </div>
+        With canvas, the accessibility has to be added with ARIA attributes
+        on the canvas element or added using internal fallback content placed
+        within the opening and closing canvas tags. -->
+    <h4 class="mt-4 font-weight-bold text-center text-white">Daily Statistics</h4>
+    <canvas id="respikar-day-chart" class="container py-3" height="300px"
+            aria-label="Chart for Day Statistics" role="img"></canvas>
 </section>
 
 <div class="container bg-light py-4 text-center">
