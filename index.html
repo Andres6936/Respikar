@@ -198,7 +198,7 @@
 
     let context = document.getElementById('respikar-day-chart');
     let myChart = new Chart(context, {
-        type: 'pie',
+        type: 'doughnut',
         data: {
             labels: ['Missing', 'Rejected', 'Completed', 'Next Month'],
             datasets: [{
@@ -220,7 +220,8 @@
             }]
         },
         options: {
-            cutoutPercentage: 0,
+            // 50 - for doughnut, 0 - for pie
+            cutoutPercentage: 50,
         }
     });
 
