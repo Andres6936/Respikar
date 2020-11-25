@@ -124,25 +124,29 @@
     <div class="row row-cols-2 g-1">
         <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
              data-stroke="#198754" data-value="69" data-stroke-width="10">
-            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right">
+            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right" data-toggle="tooltip"
+                 data-placement="left" data-original-title="Completed">
                 <use xlink:href="#bi-exclamation"></use>
             </svg>
         </div>
         <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
              data-stroke="#dc3545" data-value="69" data-stroke-width="10">
-            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right">
+            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right" data-toggle="tooltip"
+                 data-placement="left" data-original-title="Missing">
                 <use xlink:href="#bi-exclamation"></use>
             </svg>
         </div>
         <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
              data-stroke="#ffc107" data-value="69" data-stroke-width="10">
-            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right">
+            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right" data-toggle="tooltip"
+                 data-placement="left" data-original-title="Rejected">
                 <use xlink:href="#bi-exclamation"></use>
             </svg>
         </div>
         <div class="col bg-white border p-2 ldBar label-center" style="width: 50%; height: 100%" data-preset="circle"
              data-stroke="#0d6efd" data-value="69" data-stroke-width="10">
-            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right">
+            <svg viewBox="0 0 16 16" width="1.3em" height="1.3em" class="float-right" data-toggle="tooltip"
+                 data-placement="left" data-original-title="Next Month">
                 <use xlink:href="#bi-exclamation"></use>
             </svg>
         </div>
@@ -182,6 +186,15 @@
             window.location.href = '/html/SignIn.html';
         }
     }
+
+    // Example: Enable tooltips everywhere
+    // One way to initialize all tooltips on a page would be to select them
+    // by their data-toggle attribute:
+    // Reference: Boostrap 5 Doc - Section Tooltip
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
 
     let context = document.getElementById('respikar-day-chart');
     let myChart = new Chart(context, {
