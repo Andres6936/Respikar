@@ -8,9 +8,9 @@
 
     <title>Respikar</title>
 
-    <link rel="icon" sizes="200x200" href="/img/png/Logo.png">
+    <link rel="icon" sizes="200x200" href="./img/png/Logo.png">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <!-- Needed for the Sticky Bottom Footer -->
 <body class="d-flex flex-column h-100">
@@ -128,12 +128,13 @@
 
 <footer class="bg-light mt-auto py-2 border-top fixed-bottom">
     <div class="container mx-0 row row-cols-4 gx-5">
-        <a class="col" href="#"><img src="img/svg/Smock_Home_18_N.svg" class="h-100" alt="Home"></a>
-        <a class="col" href="html/Calendar.html"><img src="img/svg/Smock_Calendar_18_N.svg" class="h-100"
+        <a class="col" href="#"><img src="./img/svg/Smock_Home_18_N.svg" class="h-100" alt="Home"></a>
+        <a class="col" href="html/Calendar.html"><img src="./img/svg/Smock_Calendar_18_N.svg" class="h-100"
                                                       alt="Calendar"></a>
-        <a class="col" href="html/HowTo.html"><img src="img/svg/Smock_GraphDonut_18_N.svg" class="h-100"
+        <a class="col" href="html/HowTo.html"><img src="./img/svg/Smock_GraphDonut_18_N.svg" class="h-100"
                                                    alt="Graph"></a>
-        <a class="col" href="html/Profile.html"><img src="img/svg/Smock_Settings_18_N.svg" class="h-100" alt="Settings"></a>
+        <a class="col" href="html/Profile.html"><img src="./img/svg/Smock_Settings_18_N.svg" class="h-100"
+                                                     alt="Settings"></a>
     </div>
 </footer>
 
@@ -151,7 +152,7 @@
         if (isFirstView === null) {
             localStorage.setItem("isFirstSession", "false");
             // Redirect to page of login
-            window.location.href = '/html/SignIn.html';
+            window.location.href = './html/SignIn.html';
         }
     }
 
