@@ -57,8 +57,32 @@ class Alarm {
         return counterOfDaysUsed <= this.MINIMUM_DAYS_NEED_FOR_SHOW_THREE_LETTERS_OF_DAY;
     }
 
-    getDaysUsed() {
+    /**
+     * @return {boolean} True if no selected days.
+     */
+    isAllDaysDeactivate() {
+        let counterOfDaysUsed = 0;
+        for (let isUsed of this.daysActive.values()) {
+            if (isUsed) {
+                counterOfDaysUsed += 1;
+            }
+        }
 
+        // Zero days selected ?
+        return counterOfDaysUsed === 0;
+    }
+
+    getDaysUsed() {
+        if (this.isAllDaysUsed()) {
+
+        } else if (this.isOnlyThreeDaysUsedOrLess()) {
+
+        } else if (this.isAllDaysDeactivate()) {
+
+        } else {
+            // Only option, more of 3 days and less of 7 days used.
+            // Thus, range is between (4 and 6), inclusive.
+        }
     }
 
     /**
