@@ -143,6 +143,9 @@ class Alarm {
      * @return {HTMLDivElement}
      */
     toHTML() {
+        // References for create elements svg and use
+        // https://florianbrinkmann.com/en/svg-use-element-javascript-4513/
+
         // @type {HTMLDivElement}
         const container = document.createElement('div');
         container.classList.add("row", "row-cols-3", "mb-3", "bg-white", "border",
@@ -154,12 +157,12 @@ class Alarm {
         // @type {HTMLDivElement}
         const innerContainer = document.createElement('div');
         innerContainer.classList.add('row', 'row-cols-2');
-        const svgElement = document.createElement('svg');
+        const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svgElement.classList.add('col-4', 'offset-1');
         svgElement.setAttribute('width', '2em');
         svgElement.setAttribute('height', '2em');
         svgElement.setAttribute('viewBox', '0 0 16 16');
-        const useElement = document.createElement('use');
+        const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         // Reference: https://stackoverflow.com/a/12423019
         useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
         const paragraphHour = document.createElement('p');
@@ -179,13 +182,13 @@ class Alarm {
         // @type {HTMLDivElement}
         const containerIconToggle = document.createElement('div');
         containerIconToggle.classList.add('col-1');
-        const svgIcon = document.createElement('svg');
+        const svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svgIcon.classList.add('float-right');
         svgIcon.setAttribute('width', '1.3em');
         svgIcon.setAttribute('height', '1.3em');
         svgIcon.setAttribute('viewBox', '0 0 16 16');
         svgIcon.style.transform = 'translate(100%, -100%)';
-        const useIconElement = document.createElement('use');
+        const useIconElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         // Reference: https://stackoverflow.com/a/12423019
         useIconElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-x');
 
@@ -199,6 +202,11 @@ class Alarm {
         return container;
     }
 
+    appendAlarmContainer() {
+        const containerAlarms = document.querySelector('#rp-container-alarms');
+        containerAlarms.appendChild(this.toHTML());
+    }
+
     get DAYS_FOR_WEEK() {
         return 7;
     }
@@ -208,4 +216,4 @@ class Alarm {
     }
 }
 
-console.log(new Alarm().toHTML().outerHTML);
+new Alarm().appendAlarmContainer();
