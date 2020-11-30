@@ -89,8 +89,8 @@ class Alarm {
     }
 
     /**
-     * @return {string} Representation of hour and minutes in the which the
-     *  alarm will be activated. The format is HH:MM
+     * @return {HTMLParagraphElement} Representation of hour and minutes in the
+     * which the alarm will be activated. The format is HH:MM
      */
     getHourAndMinutes() {
         let hours = String(this.hour);
@@ -103,8 +103,16 @@ class Alarm {
             hours = '0' + hours;
         }
 
+        const paragraphHour = document.createElement('p');
+        paragraphHour.classList.add('col-7', 'h1', 'mb-0');
+        // If all the days are deactivate, added the class muted for simulate
+        // a alarm deactivate.
+        if (this.isAllDaysDeactivate()) {
+            paragraphHour.classList.add('text-muted');
+        }
         // Requirement: Format HH:MM
-        return `${hours}:${minutes}`;
+        paragraphHour.innerText = `${hours}:${minutes}`;
+        return paragraphHour;
     }
 
     /**
@@ -195,13 +203,10 @@ class Alarm {
         const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         // Reference: https://stackoverflow.com/a/12423019
         useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
-        const paragraphHour = document.createElement('p');
-        paragraphHour.classList.add('col-7', 'h1', 'mb-0');
-        paragraphHour.innerText = this.getHourAndMinutes();
 
         containerHour.appendChild(innerContainer);
         innerContainer.appendChild(svgElement);
-        innerContainer.appendChild(paragraphHour);
+        innerContainer.appendChild(this.getHourAndMinutes());
         svgElement.appendChild(useElement);
 
         // @type {HTMLDivElement}
