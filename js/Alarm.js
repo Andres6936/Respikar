@@ -92,7 +92,7 @@ class Alarm {
             container.classList.add('row', 'flex-nowrap');
 
             for (let day of this.daysActive.keys()) {
-                container.appendChild(this.createElementsDay(day[0].toLowerCase()));
+                container.appendChild(this.createElementsDay(day[0]));
             }
 
             return container;
@@ -121,7 +121,7 @@ class Alarm {
             container.classList.add('row', 'flex-nowrap', 'text-muted');
 
             for (let day of this.daysActive.keys()) {
-                container.appendChild(this.createElementsDay(day[0].toLowerCase()));
+                container.appendChild(this.createElementsDay(day[0]));
             }
 
             return container;
@@ -132,7 +132,7 @@ class Alarm {
             container.classList.add('row', 'flex-nowrap');
 
             for (let day of this.daysActive.keys()) {
-                container.appendChild(this.createElementsDay(day[0].toLowerCase()));
+                container.appendChild(this.createElementsDay(day[0]));
             }
 
             return container;
