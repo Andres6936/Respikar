@@ -74,7 +74,24 @@ class Alarm {
 
     getDaysUsed() {
         if (this.isAllDaysUsed()) {
+            const container = document.createElement('div');
+            container.classList.add('row', 'flex-nowrap');
+            const createElement = (letter) => {
+                const column = document.createElement('div');
+                column.classList.add('col', 'px-0');
+                const paragraph = document.createElement('p');
+                paragraph.classList.add('my-0');
+                paragraph.innerText = letter;
 
+                column.appendChild(paragraph);
+                return column;
+            };
+
+            for (let day of this.daysActive.keys()) {
+                container.appendChild(createElement(day[0].toLowerCase()));
+            }
+
+            return container;
         } else if (this.isOnlyThreeDaysUsedOrLess()) {
 
         } else if (this.isAllDaysDeactivate()) {
@@ -155,5 +172,3 @@ class Alarm {
         return 3;
     }
 }
-
-console.log(new Alarm().toHTML().outerHTML);
