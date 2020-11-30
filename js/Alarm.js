@@ -32,6 +32,14 @@ class Alarm {
         for (const day in Week) {
             this.daysActive.set(Week[day], false);
         }
+
+        // HTMLElements
+
+        // @type{HTMLSVGElement} Represent the graphic for the alarm
+        this.iconAlarmElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        this.iconAlarmElement.setAttribute('width', '2em');
+        this.iconAlarmElement.setAttribute('height', '2em');
+        this.iconAlarmElement.setAttribute('viewBox', '0 0 16 16');
     }
 
     /**
@@ -195,24 +203,20 @@ class Alarm {
         // @type {HTMLDivElement}
         const innerContainer = document.createElement('div');
         innerContainer.classList.add('row', 'row-cols-2');
-        const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svgElement.classList.add('col-4', 'offset-1');
+        this.iconAlarmElement.classList.add('col-4', 'offset-1');
         // If all the days are deactivate, added the class muted for simulate
         // a alarm deactivate.
         if (this.isAllDaysDeactivate()) {
-            svgElement.classList.add('text-muted');
+            this.iconAlarmElement.classList.add('text-muted');
         }
-        svgElement.setAttribute('width', '2em');
-        svgElement.setAttribute('height', '2em');
-        svgElement.setAttribute('viewBox', '0 0 16 16');
         const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         // Reference: https://stackoverflow.com/a/12423019
         useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
 
         containerHour.appendChild(innerContainer);
-        innerContainer.appendChild(svgElement);
+        innerContainer.appendChild(this.iconAlarmElement);
         innerContainer.appendChild(this.getHourAndMinutes());
-        svgElement.appendChild(useElement);
+        this.iconAlarmElement.appendChild(useElement);
 
         // @type {HTMLDivElement}
         const containerDaysActive = document.createElement('div');
