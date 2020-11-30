@@ -89,6 +89,21 @@ class Alarm {
     }
 
     /**
+     * @return {string} Representation of hour and minutes in the which the
+     *  alarm will be activated. The format is HH:MM
+     */
+    getHourAndMinutes() {
+        let hours = String(this.hour);
+        const minutes = String(this.minute);
+
+        if (hours >= 1 && hours <= 9) {
+            hours = '0' + hours;
+        }
+
+        return `${hours}:${minutes}`;
+    }
+
+    /**
      * @return {HTMLDivElement}
      */
     getDaysUsed() {
@@ -178,6 +193,7 @@ class Alarm {
         useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
         const paragraphHour = document.createElement('p');
         paragraphHour.classList.add('col-7', 'h1', 'mb-0');
+        paragraphHour.innerText = this.getHourAndMinutes();
 
         containerHour.appendChild(innerContainer);
         innerContainer.appendChild(svgElement);
