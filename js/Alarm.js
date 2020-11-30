@@ -21,6 +21,9 @@ Object.freeze(Week);
 
 class Alarm {
     constructor() {
+        // Format of 24 hours.
+        // @type {number} Hour in the which the alarm will be activated.
+        this.hour = 12;
         // @type {Map<String, Boolean>} Indicate if the Alarm is used in these day.
         this.daysActive = new Map();
         // Set initially all days to false (this is, not used)
