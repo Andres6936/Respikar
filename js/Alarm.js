@@ -54,7 +54,7 @@ class Alarm {
             }
         }
 
-        return counterOfDaysUsed <= this.MINIMUM_DAYS_NEED_FOR_SHOW_THREE_LETTERS_OF_DAY;
+        return counterOfDaysUsed > 0 && counterOfDaysUsed <= this.MINIMUM_DAYS_NEED_FOR_SHOW_THREE_LETTERS_OF_DAY;
     }
 
     /**
@@ -207,3 +207,5 @@ class Alarm {
         return 3;
     }
 }
+
+console.log(new Alarm().toHTML().outerHTML);
