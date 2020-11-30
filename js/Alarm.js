@@ -63,6 +63,18 @@ class Alarm {
 
         const containerIconToggle = document.createElement('div');
         containerIconToggle.classList.add('col-1');
+        const svgIcon = document.createElement('svg');
+        svgIcon.classList.add('float-right');
+        svgIcon.setAttribute('width', '1.3em');
+        svgIcon.setAttribute('height', '1.3em');
+        svgIcon.setAttribute('viewBox', '0 0 16 16');
+        svgIcon.style.transform = 'translate(100%, -100%)';
+        const useIconElement = document.createElement('use');
+        // Reference: https://stackoverflow.com/a/12423019
+        useIconElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-x');
+
+        containerIconToggle.appendChild(svgIcon);
+        svgIcon.appendChild(useIconElement);
 
         container.appendChild(containerHour);
         container.appendChild(containerDaysActive);
