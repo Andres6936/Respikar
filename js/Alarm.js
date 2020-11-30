@@ -212,6 +212,11 @@ class Alarm {
         // @type {HTMLDivElement}
         const containerDaysActive = document.createElement('div');
         containerDaysActive.classList.add('col-4', 'ml-2');
+        // The user-select property in CSS controls how the text in an element
+        // is allowed to be selected. For example, it can be used to make text
+        // unselectable.
+        // Reference: https://css-tricks.com/almanac/properties/u/user-select/
+        containerDaysActive.style.userSelect = 'none';
 
         containerDaysActive.appendChild(this.getDaysUsed());
 
