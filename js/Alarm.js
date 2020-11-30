@@ -72,6 +72,9 @@ class Alarm {
         return counterOfDaysUsed === 0;
     }
 
+    /**
+     * @return {HTMLDivElement}
+     */
     getDaysUsed() {
         if (this.isAllDaysUsed()) {
             const container = document.createElement('div');
