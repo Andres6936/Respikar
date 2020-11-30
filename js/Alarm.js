@@ -30,12 +30,15 @@ class Alarm {
     }
 
     toHTML() {
+        // @type {HTMLDivElement}
         const container = document.createElement('div');
         container.classList.add("row", "row-cols-3", "mb-3", "bg-white", "border",
             "align-items-center", "pb-3", "pt-4");
 
+        // @type {HTMLDivElement}
         const containerHour = document.createElement('div');
         containerHour.classList.add('col-6');
+        // @type {HTMLDivElement}
         const innerContainer = document.createElement('div');
         innerContainer.classList.add('row', 'row-cols-2');
         const svgElement = document.createElement('svg');
@@ -54,6 +57,7 @@ class Alarm {
         innerContainer.appendChild(paragraphHour);
         svgElement.appendChild(useElement);
 
+        // @type {HTMLDivElement}
         const containerDaysActive = document.createElement('div');
         containerDaysActive.classList.add('col-4', 'ml-2');
         const paragraphDaysUsed = document.createElement('p');
@@ -61,6 +65,7 @@ class Alarm {
 
         containerDaysActive.appendChild(paragraphDaysUsed);
 
+        // @type {HTMLDivElement}
         const containerIconToggle = document.createElement('div');
         containerIconToggle.classList.add('col-1');
         const svgIcon = document.createElement('svg');
