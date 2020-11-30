@@ -93,7 +93,25 @@ class Alarm {
 
             return container;
         } else if (this.isOnlyThreeDaysUsedOrLess()) {
+            let days = []
+            for (let [day, isUsed] of this.daysActive) {
+                if (isUsed) {
+                    days.push(day);
+                }
+            }
 
+            days = days.map(value => {
+                value.substring(0, 3)
+            });
+
+            const container = document.createElement('div');
+            container.classList.add('mb-0', 'text-nowrap');
+
+            for (let day of days) {
+                container.innerText = day + ', ';
+            }
+
+            return container;
         } else if (this.isAllDaysDeactivate()) {
 
         } else {
