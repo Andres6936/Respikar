@@ -173,10 +173,8 @@ class Alarm {
         // @type {HTMLDivElement}
         const containerDaysActive = document.createElement('div');
         containerDaysActive.classList.add('col-4', 'ml-2');
-        const paragraphDaysUsed = document.createElement('p');
-        paragraphDaysUsed.classList.add('mb-0', 'text-nowrap');
 
-        containerDaysActive.appendChild(paragraphDaysUsed);
+        containerDaysActive.appendChild(this.getDaysUsed());
 
         // @type {HTMLDivElement}
         const containerIconToggle = document.createElement('div');
