@@ -44,6 +44,7 @@ class Alarm {
         svgElement.setAttribute('height', '2em');
         svgElement.setAttribute('viewBox', '0 0 16 16');
         const useElement = document.createElement('use');
+        // Reference: https://stackoverflow.com/a/12423019
         useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
         const paragraphHour = document.createElement('p');
         paragraphHour.classList.add('col-7', 'h1', 'mb-0');
