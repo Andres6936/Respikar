@@ -43,8 +43,18 @@ class Alarm {
         return counterOfDaysUsed === this.DAYS_FOR_WEEK;
     }
 
+    /**
+     * @return {boolean} True if only are used three or less days.
+     */
     isOnlyThreeDaysUsedOrLess() {
+        let counterOfDaysUsed = 0;
+        for (let isUsed of this.daysActive.values()) {
+            if (isUsed) {
+                counterOfDaysUsed += 1;
+            }
+        }
 
+        return counterOfDaysUsed <= this.MINIMUM_DAYS_NEED_FOR_SHOW_THREE_LETTERS_OF_DAY;
     }
 
     getDaysUsed() {
@@ -115,6 +125,10 @@ class Alarm {
 
     get DAYS_FOR_WEEK() {
         return 7;
+    }
+
+    get MINIMUM_DAYS_NEED_FOR_SHOW_THREE_LETTERS_OF_DAY() {
+        return 3;
     }
 }
 
