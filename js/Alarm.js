@@ -197,6 +197,11 @@ class Alarm {
         innerContainer.classList.add('row', 'row-cols-2');
         const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svgElement.classList.add('col-4', 'offset-1');
+        // If all the days are deactivate, added the class muted for simulate
+        // a alarm deactivate.
+        if (this.isAllDaysDeactivate()) {
+            svgElement.classList.add('text-muted');
+        }
         svgElement.setAttribute('width', '2em');
         svgElement.setAttribute('height', '2em');
         svgElement.setAttribute('viewBox', '0 0 16 16');
