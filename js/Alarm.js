@@ -72,6 +72,17 @@ class Alarm {
         return counterOfDaysUsed === 0;
     }
 
+    createElementsDay(letter) {
+        const column = document.createElement('div');
+        column.classList.add('col', 'px-0');
+        const paragraph = document.createElement('p');
+        paragraph.classList.add('my-0');
+        paragraph.innerText = letter;
+
+        column.appendChild(paragraph);
+        return column;
+    }
+
     /**
      * @return {HTMLDivElement}
      */
@@ -79,19 +90,9 @@ class Alarm {
         if (this.isAllDaysUsed()) {
             const container = document.createElement('div');
             container.classList.add('row', 'flex-nowrap');
-            const createElement = (letter) => {
-                const column = document.createElement('div');
-                column.classList.add('col', 'px-0');
-                const paragraph = document.createElement('p');
-                paragraph.classList.add('my-0');
-                paragraph.innerText = letter;
-
-                column.appendChild(paragraph);
-                return column;
-            };
 
             for (let day of this.daysActive.keys()) {
-                container.appendChild(createElement(day[0].toLowerCase()));
+                container.appendChild(this.createElementsDay(day[0].toLowerCase()));
             }
 
             return container;
@@ -116,7 +117,14 @@ class Alarm {
 
             return container;
         } else if (this.isAllDaysDeactivate()) {
+            const container = document.createElement('div');
+            container.classList.add('row', 'flex-nowrap', 'text-muted');
 
+            for (let day of this.daysActive.keys()) {
+                container.appendChild(this.createElementsDay(day[0].toLowerCase()));
+            }
+
+            return container;
         } else {
             // Only option, more of 3 days and less of 7 days used.
             // Thus, range is between (4 and 6), inclusive.
