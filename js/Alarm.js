@@ -103,6 +103,7 @@ class Alarm {
             hours = '0' + hours;
         }
 
+        // Requirement: Format HH:MM
         return `${hours}:${minutes}`;
     }
 
