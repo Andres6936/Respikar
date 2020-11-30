@@ -96,6 +96,9 @@ class Alarm {
         let hours = String(this.hour);
         const minutes = String(this.minute);
 
+        // Pretty format for hours with only a digit
+        // the convert to hours with two digit, begin for
+        // add the zero.
         if (hours >= 1 && hours <= 9) {
             hours = '0' + hours;
         }
