@@ -29,6 +29,24 @@ class Alarm {
         }
     }
 
+    /**
+     * @return {boolean} True if the alarm is used all days.
+     */
+    isAllDaysUsed() {
+        let counterOfDaysUsed = 0;
+        for (let isUsed of this.daysActive.values()) {
+            if (isUsed) {
+                counterOfDaysUsed += 1;
+            }
+        }
+
+        return counterOfDaysUsed === this.DAYS_FOR_WEEK;
+    }
+
+    isOnlyThreeDaysUsedOrLess() {
+
+    }
+
     getDaysUsed() {
 
     }
@@ -93,6 +111,10 @@ class Alarm {
         container.appendChild(containerIconToggle);
 
         return container;
+    }
+
+    get DAYS_FOR_WEEK() {
+        return 7;
     }
 }
 
