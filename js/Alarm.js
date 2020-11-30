@@ -128,6 +128,14 @@ class Alarm {
         } else {
             // Only option, more of 3 days and less of 7 days used.
             // Thus, range is between (4 and 6), inclusive.
+            const container = document.createElement('div');
+            container.classList.add('row', 'flex-nowrap');
+
+            for (let day of this.daysActive.keys()) {
+                container.appendChild(this.createElementsDay(day[0].toLowerCase()));
+            }
+
+            return container;
         }
     }
 
