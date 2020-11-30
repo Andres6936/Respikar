@@ -29,6 +29,13 @@ class Alarm {
         }
     }
 
+    getDaysUsed() {
+
+    }
+
+    /**
+     * @return {HTMLDivElement}
+     */
     toHTML() {
         // @type {HTMLDivElement}
         const container = document.createElement('div');
