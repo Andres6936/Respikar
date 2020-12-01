@@ -91,6 +91,12 @@
         <path fill-rule="evenodd"
               d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
     </symbol>
+
+    <symbol id="bi-house-door" viewBox="0 0 16 16" fill="currentColor">
+        <path fill-rule="evenodd"
+              d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+        <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+    </symbol>
 </svg>
 
 <section id="rp-container-alarms" class="container my-3 px-4 py-3 bg-light text-center font-weight-bold">
@@ -281,7 +287,11 @@
 
 <footer class="bg-light mt-auto py-2 border-top fixed-bottom">
     <div class="container mx-0 row row-cols-4 gx-5">
-        <a class="col" href="../index.html"><img src="../img/svg/Smock_Home_18_N.svg" class="h-100" alt="Home"></a>
+        <a class="col text-muted" href="../index.html">
+            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
+                <use xlink:href="#bi-house-door"></use>
+            </svg>
+        </a>
         <a class="col" href="#">
             <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
                 <use xlink:href="#bi-bell"></use>
