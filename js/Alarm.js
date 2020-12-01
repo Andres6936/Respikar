@@ -1,5 +1,7 @@
 "use strict";
 
+import {IconAlarm} from './IconAlarm.js';
+
 const Week = {
     SUNDAY: "SUNDAY",
     MONDAY: "MONDAY",
@@ -41,27 +43,7 @@ class Alarm {
         }
 
         // HTMLElements
-
-        // @type{HTMLSVGElement} Represent the graphic for the alarm
-        this.iconAlarmElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        this.iconAlarmElement.setAttribute('width', '2em');
-        this.iconAlarmElement.setAttribute('height', '2em');
-        this.iconAlarmElement.setAttribute('viewBox', '0 0 16 16');
-        this.iconAlarmElement.dataset.activate = 'false';
-        // Added the onclick event is recommend set the style of cursor to
-        // pointer, for indicate to user that the element response to user
-        // click
-        this.iconAlarmElement.style.cursor = 'pointer';
-        // Toggle the state of icon, green for activate alarm, gray for deactivate alarm
-        this.iconAlarmElement.onclick = () => {
-            if (this.iconAlarmElement.dataset.activate === 'true') {
-                this.iconAlarmElement.style.removeProperty('color');
-                this.iconAlarmElement.dataset.activate = 'false';
-            } else {
-                this.iconAlarmElement.style.setProperty('color', '#198754', 'important');
-                this.iconAlarmElement.dataset.activate = 'true';
-            }
-        };
+        this.iconAlarm = new IconAlarm();
 
         // @type{HTMLSVGElement} Represent the graphic for close (it deleted of DOM) the alarm
         this.iconCloseElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -260,20 +242,19 @@ class Alarm {
         // @type {HTMLDivElement}
         const innerContainer = document.createElement('div');
         innerContainer.classList.add('row', 'row-cols-2');
-        this.iconAlarmElement.classList.add('col-4', 'offset-1');
         // If all the days are deactivate, added the class muted for simulate
         // a alarm deactivate.
         if (this.isAllDaysDeactivate()) {
-            this.iconAlarmElement.classList.add('text-muted');
+            this.iconAlarm.deactivate();
         }
         const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         // Reference: https://stackoverflow.com/a/12423019
         useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
 
         containerHour.appendChild(innerContainer);
-        innerContainer.appendChild(this.iconAlarmElement);
+        innerContainer.appendChild(this.iconAlarm.toHTML());
         innerContainer.appendChild(this.getHourAndMinutes());
-        this.iconAlarmElement.appendChild(useElement);
+        this.iconAlarm.appendChild(useElement);
 
         // @type {HTMLDivElement}
         const containerDaysActive = document.createElement('div');
