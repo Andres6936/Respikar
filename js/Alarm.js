@@ -47,7 +47,7 @@ class Alarm {
                 this.iconAlarmElement.style.removeProperty('color');
                 this.iconAlarmElement.dataset.activate = 'false';
             } else {
-                this.iconAlarmElement.style.setProperty('color', 'green', 'important');
+                this.iconAlarmElement.style.setProperty('color', '#198754', 'important');
                 this.iconAlarmElement.dataset.activate = 'true';
             }
         };
