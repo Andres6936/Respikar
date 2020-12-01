@@ -40,6 +40,17 @@ class Alarm {
         this.iconAlarmElement.setAttribute('width', '2em');
         this.iconAlarmElement.setAttribute('height', '2em');
         this.iconAlarmElement.setAttribute('viewBox', '0 0 16 16');
+        this.iconAlarmElement.dataset.activate = 'false';
+        // Toggle the state of icon, green for activate alarm, gray for deactivate alarm
+        this.iconAlarmElement.onclick = () => {
+            if (this.iconAlarmElement.dataset.activate === 'true') {
+                this.iconAlarmElement.style.removeProperty('color');
+                this.iconAlarmElement.dataset.activate = 'false';
+            } else {
+                this.iconAlarmElement.style.setProperty('color', 'green', 'important');
+                this.iconAlarmElement.dataset.activate = 'true';
+            }
+        };
     }
 
     /**
