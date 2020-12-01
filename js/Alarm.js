@@ -74,7 +74,8 @@ class Alarm {
             // Description of problem: querySelector method uses CSS3 selectors for querying the DOM
             // and CSS3 doesn't support ID selectors that start with a digit:
             // Solution: Added the character U to begin of each UUID generate
-            document.querySelector('#rp-container-alarms').removeChild(document.querySelector(`#${this.uuid}`));
+            document.querySelector('#rp-container-alarms')
+                .removeChild(document.querySelector(`#${this.uuid}`));
         }
     }
 
