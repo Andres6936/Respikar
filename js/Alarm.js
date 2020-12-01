@@ -21,6 +21,9 @@ Object.freeze(Week);
 
 class Alarm {
     constructor() {
+        // UUID is the abbreviation of univerally unique identifier, which
+        // is an identification number to uniquely identify something.
+        this.uuid = Math.floor(Math.random() * Date.now());
         // Format of 24 hours.
         // @type {number} Hour in the which the alarm will be activated.
         this.hour = 12;
@@ -201,6 +204,7 @@ class Alarm {
         }
 
         return {
+            uuid: this.uuid,
             hour: this.hour,
             minute: this.minute,
             daysUsed: daysUsedObject,
