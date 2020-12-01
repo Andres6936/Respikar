@@ -195,6 +195,8 @@ class Alarm {
         const daysUsedObject = {};
         for (let [day, isUsed] of this.daysActive) {
             // Added the properties (in lower case)
+            // Hack of Js, if the property not exist (like in this case),
+            // Js create a new property in the object
             daysUsedObject[day.toLowerCase()] = isUsed;
         }
 
