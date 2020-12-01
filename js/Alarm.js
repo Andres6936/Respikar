@@ -190,6 +190,21 @@ class Alarm {
         }
     }
 
+    toJSON() {
+        // Create an temporal object for serialize the map to json
+        const daysUsedObject = {};
+        for (let [day, isUsed] of this.daysActive) {
+            // Added the properties (in lower case)
+            daysUsedObject[day.toLowerCase()] = isUsed;
+        }
+
+        return {
+            hour: this.hour,
+            minute: this.minute,
+            daysUsed: daysUsedObject,
+        }
+    }
+
     /**
      * @return {HTMLDivElement}
      */
@@ -278,3 +293,4 @@ class Alarm {
 }
 
 new Alarm().appendAlarmContainer();
+console.log(JSON.stringify(new Alarm()))
