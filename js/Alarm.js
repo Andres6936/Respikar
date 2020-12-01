@@ -1,6 +1,7 @@
 "use strict";
 
 import {IconAlarm} from './IconAlarm.js';
+import {IconClose} from "./IconClose.js";
 
 const Week = {
     SUNDAY: "SUNDAY",
@@ -44,21 +45,7 @@ class Alarm {
 
         // HTMLElements
         this.iconAlarm = new IconAlarm();
-
-        // @type{HTMLSVGElement} Represent the graphic for close (it deleted of DOM) the alarm
-        this.iconCloseElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        this.iconCloseElement.setAttribute('width', '1.3em');
-        this.iconCloseElement.setAttribute('height', '1.3em');
-        this.iconCloseElement.setAttribute('viewBox', '0 0 16 16');
-        this.iconCloseElement.style.cursor = 'pointer';
-        this.iconCloseElement.onclick = () => {
-            // Problem presented: Uncaught SyntaxError: Failed to execute 'querySelector' on 'Document'
-            // Description of problem: querySelector method uses CSS3 selectors for querying the DOM
-            // and CSS3 doesn't support ID selectors that start with a digit:
-            // Solution: Added the character U to begin of each UUID generate
-            document.querySelector('#rp-container-alarms')
-                .removeChild(document.querySelector(`#${this.uuid}`));
-        }
+        this.iconClose = new IconClose(this.uuid);
     }
 
     /**
@@ -271,14 +258,12 @@ class Alarm {
         const containerIconToggle = document.createElement('div');
         containerIconToggle.classList.add('col-1');
 
-        this.iconCloseElement.classList.add('float-right');
-        this.iconCloseElement.style.transform = 'translate(100%, -100%)';
         const useIconElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         // Reference: https://stackoverflow.com/a/12423019
         useIconElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-x');
 
-        containerIconToggle.appendChild(this.iconCloseElement);
-        this.iconCloseElement.appendChild(useIconElement);
+        containerIconToggle.appendChild(this.iconClose.toHTML());
+        this.iconClose.appendChild(useIconElement);
 
         container.appendChild(containerHour);
         container.appendChild(containerDaysActive);
