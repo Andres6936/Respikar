@@ -23,8 +23,11 @@ class Alarm {
     constructor() {
         // UUID is the abbreviation of univerally unique identifier, which
         // is an identification number to uniquely identify something.
-        // @type {number}
-        this.uuid = Math.floor(Math.random() * Date.now());
+        // The function querySelector not support ID selector that begin
+        // with numbers, so, that added the character U to begin of each
+        // UUID generated.
+        // @type {string}
+        this.uuid = 'U' + String(Math.floor(Math.random() * Date.now()));
         // Format of 24 hours.
         // @type {number} Hour in the which the alarm will be activated.
         this.hour = 12;
@@ -65,6 +68,14 @@ class Alarm {
         this.iconCloseElement.setAttribute('width', '1.3em');
         this.iconCloseElement.setAttribute('height', '1.3em');
         this.iconCloseElement.setAttribute('viewBox', '0 0 16 16');
+        this.iconCloseElement.style.cursor = 'pointer';
+        this.iconCloseElement.onclick = () => {
+            // Problem presented: Uncaught SyntaxError: Failed to execute 'querySelector' on 'Document'
+            // Description of problem: querySelector method uses CSS3 selectors for querying the DOM
+            // and CSS3 doesn't support ID selectors that start with a digit:
+            // Solution: Added the character U to begin of each UUID generate
+            document.querySelector('#rp-container-alarms').removeChild(document.querySelector(`#${this.uuid}`));
+        }
     }
 
     /**
@@ -238,7 +249,7 @@ class Alarm {
         // @type {HTMLDivElement}
         const container = document.createElement('div');
         // Added a ID for identify the alarm of other alarms
-        container.setAttribute('id', String(this.uuid));
+        container.setAttribute('id', this.uuid);
         container.classList.add("row", "row-cols-3", "mb-3", "bg-white", "border",
             "align-items-center", "pb-3", "pt-4");
 
@@ -309,4 +320,3 @@ class Alarm {
 }
 
 new Alarm().appendAlarmContainer();
-console.log(JSON.stringify(new Alarm()))
