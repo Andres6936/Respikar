@@ -60,6 +60,7 @@ class Alarm {
             }
         };
 
+        // @type{HTMLSVGElement} Represent the graphic for close (it deleted of DOM) the alarm
         this.iconCloseElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         this.iconCloseElement.setAttribute('width', '1.3em');
         this.iconCloseElement.setAttribute('height', '1.3em');
