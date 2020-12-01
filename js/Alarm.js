@@ -23,6 +23,7 @@ class Alarm {
     constructor() {
         // UUID is the abbreviation of univerally unique identifier, which
         // is an identification number to uniquely identify something.
+        // @type {number}
         this.uuid = Math.floor(Math.random() * Date.now());
         // Format of 24 hours.
         // @type {number} Hour in the which the alarm will be activated.
@@ -226,6 +227,8 @@ class Alarm {
 
         // @type {HTMLDivElement}
         const container = document.createElement('div');
+        // Added a ID for identify the alarm of other alarms
+        container.setAttribute('id', String(this.uuid));
         container.classList.add("row", "row-cols-3", "mb-3", "bg-white", "border",
             "align-items-center", "pb-3", "pt-4");
 
