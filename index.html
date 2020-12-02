@@ -224,10 +224,10 @@
         // @type {Storage}
         let localStorage = window.localStorage;
         // @type {string|null}
-        const isFirstView = localStorage.getItem("isFirstSession");
+        const isFirstView = localStorage.getItem("IS_FIRST_SESSION");
         // If not has been defined (null), then is first visit of user
         if (isFirstView === null) {
-            localStorage.setItem("isFirstSession", "false");
+            localStorage.setItem("IS_FIRST_SESSION", "false");
             // Redirect to page of login
             window.location.href = './html/SignIn.html';
             // Create dummy date for show in the section of stats
