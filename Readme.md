@@ -1,12 +1,12 @@
 # Respikar.Bootstrap
 
 <p align="center">
-    <img src="./docs/Home.png" alt="Screenshot"/>
-    <img src="./docs/Alarm.png" alt="Screenshot"/>
-    <img src="./docs/HowTo.png" alt="Screenshot"/>
-    <img src="./docs/Profile.png" alt="Screenshot"/>
-    <img src="./docs/SignIn.png" alt="Screenshot"/>
-    <img src="./docs/SignUp.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./docs/Home.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./docs/Alarm.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./docs/HowTo.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./docs/Profile.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./docs/SignIn.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./docs/SignUp.png" alt="Screenshot"/>
 </p>
 
 ### References
