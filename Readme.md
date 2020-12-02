@@ -16,5 +16,4 @@
  27 Jul 2016 By [Anna Murphy](https://www.pharmaceutical-journal.com/anna-murphy/426.bio)
  / <b>Read article</b> [Here](https://www.pharmaceutical-journal.com/cpd-and-learning/learning-article/how-to-help-patients-optimise-their-inhaler-technique/20201442.article?firstPass=false)
 
- - https://demos.creative-tim.com/now-ui-dashboard-pro/examples/dashboard.html?_ga=2.137389746.342464523.1606336017-934576153.1603629641
  - https://www.creative-tim.com/product/now-ui-dashboard-pro?ref=popper.js.org
