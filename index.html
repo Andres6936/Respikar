@@ -140,28 +140,28 @@
             <svg class="mt-3" viewBox="0 0 16 16" width="3em" height="3em" style="color: #0d6efd">
                 <use xlink:href="#bi-check2"></use>
             </svg>
-            <h3 class="mt-1" style="font-weight: 700; font-size: xx-large">16</h3>
+            <h3 id="label-inhaler-completed" class="mt-1" style="font-weight: 700; font-size: xx-large">16</h3>
             <h6 class="text-muted small" style="font-weight: 400">COMPLETED</h6>
         </div>
         <div class="col-12 bg-white p-2">
             <svg class="mt-3" viewBox="0 0 16 16" width="3.8em" height="3.8em" style="color: #dc3545">
                 <use xlink:href="#bi-x"></use>
             </svg>
-            <h3 class="mt-1" style="font-weight: 700; font-size: xx-large">16</h3>
+            <h3 id="label-inhaler-rejected" class="mt-1" style="font-weight: 700; font-size: xx-large">16</h3>
             <h6 class="text-muted small" style="font-weight: 400;">REJECTED</h6>
         </div>
         <div class="col-12 bg-white p-2">
             <svg class="mt-3" viewBox="0 0 16 16" width="2.5em" height="2.5em" style="color: #ffc107;">
                 <use xlink:href="#bi-clock-history"></use>
             </svg>
-            <h3 class="mt-3" style="font-weight: 700; font-size: xx-large">16</h3>
+            <h3 id="label-inhaler-missing" class="mt-3" style="font-weight: 700; font-size: xx-large">16</h3>
             <h6 class="text-muted small" style="font-weight: 400;">MISSING</h6>
         </div>
         <div class="col-12 bg-white p-2">
             <svg class="mt-3" viewBox="0 0 16 16" width="2.5em" height="2.5em" style="color: #198754">
                 <use xlink:href="#bi-clipboard-check"></use>
             </svg>
-            <h3 class="mt-3" style="font-weight: 700; font-size: xx-large">16</h3>
+            <h3 id="label-inhaler-next-month" class="mt-3" style="font-weight: 700; font-size: xx-large">16</h3>
             <h6 class="text-muted small" style="font-weight: 400;">NEXT MONTH</h6>
         </div>
     </div>
@@ -249,6 +249,12 @@
         inhalerUses[TypeUses.REJECTED] = localStorage.getItem(TypeUses.REJECTED);
         inhalerUses[TypeUses.COMPLETED] = localStorage.getItem(TypeUses.COMPLETED);
         inhalerUses[TypeUses.NEXT_MONTH] = localStorage.getItem(TypeUses.NEXT_MONTH);
+
+        // Update the elements in the DOM for reflect the information of user
+        document.getElementById('label-inhaler-missing').innerText = inhalerUses[TypeUses.MISSING];
+        document.getElementById('label-inhaler-rejected').innerText = inhalerUses[TypeUses.REJECTED];
+        document.getElementById('label-inhaler-completed').innerText = inhalerUses[TypeUses.COMPLETED];
+        document.getElementById('label-inhaler-next-month').innerText = inhalerUses[TypeUses.NEXT_MONTH];
     }
 
     // Example: Enable tooltips everywhere
