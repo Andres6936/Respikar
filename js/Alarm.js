@@ -145,6 +145,8 @@ class Alarm {
                 }
             }
 
+            // Only needed the three first letters of each day
+            // For example: Sunday -> Sun, Monday -> Mon, etc ...
             days = days.map(value => {
                 value.substring(0, 3)
             });
@@ -152,6 +154,8 @@ class Alarm {
             const container = document.createElement('div');
             container.classList.add('mb-0', 'text-nowrap');
 
+            // Each entry should be separete for a comma.
+            // Example: Sun, Mon, Tue
             for (let day of days) {
                 container.innerText = day + ', ';
             }
