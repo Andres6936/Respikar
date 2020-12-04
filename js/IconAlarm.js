@@ -33,10 +33,6 @@ export class IconAlarm {
         this.iconAlarmElement.classList.add('text-muted');
     }
 
-    appendChild(child) {
-        this.iconAlarmElement.appendChild(child);
-    }
-
     toHTML() {
         return this.iconAlarmElement;
     }

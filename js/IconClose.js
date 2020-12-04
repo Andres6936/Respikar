@@ -28,10 +28,6 @@ export class IconClose {
             .removeChild(document.querySelector(`#${uuid}`));
     }
 
-    appendChild(child) {
-        this.iconCloseElement.appendChild(child);
-    }
-
     toHTML() {
         return this.iconCloseElement;
     }
