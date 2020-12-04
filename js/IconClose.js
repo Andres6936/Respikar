@@ -1,5 +1,7 @@
 "use strict";
 
+import {UseElement} from "./UseElement.js";
+
 export class IconClose {
     constructor(uuid) {
         // @type{HTMLSVGElement} Represent the graphic for close (it deleted of DOM) the alarm
@@ -13,6 +15,8 @@ export class IconClose {
         this.iconCloseElement.onclick = () => {
             this.remove(uuid)
         }
+
+        this.iconCloseElement.appendChild(new UseElement('#bi-x').toHTML())
     }
 
     remove(uuid) {

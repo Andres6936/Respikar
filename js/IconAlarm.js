@@ -1,5 +1,7 @@
 "use strict";
 
+import {UseElement} from "./UseElement.js";
+
 export class IconAlarm {
     constructor() {
         // @type{HTMLSVGElement} Represent the graphic for the alarm
@@ -23,6 +25,8 @@ export class IconAlarm {
                 this.iconAlarmElement.dataset.activate = 'true';
             }
         };
+
+        this.iconAlarmElement.appendChild(new UseElement("#bi-alarm").toHTML())
     }
 
     deactivate() {

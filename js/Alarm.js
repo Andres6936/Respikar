@@ -234,14 +234,10 @@ class Alarm {
         if (this.isAllDaysDeactivate()) {
             this.iconAlarm.deactivate();
         }
-        const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-        // Reference: https://stackoverflow.com/a/12423019
-        useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-alarm');
 
         containerHour.appendChild(innerContainer);
         innerContainer.appendChild(this.iconAlarm.toHTML());
         innerContainer.appendChild(this.getHourAndMinutes());
-        this.iconAlarm.appendChild(useElement);
 
         // @type {HTMLDivElement}
         const containerDaysActive = document.createElement('div');
@@ -258,12 +254,7 @@ class Alarm {
         const containerIconToggle = document.createElement('div');
         containerIconToggle.classList.add('col-1');
 
-        const useIconElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-        // Reference: https://stackoverflow.com/a/12423019
-        useIconElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#bi-x');
-
         containerIconToggle.appendChild(this.iconClose.toHTML());
-        this.iconClose.appendChild(useIconElement);
 
         container.appendChild(containerHour);
         container.appendChild(containerDaysActive);
