@@ -2,6 +2,7 @@
 
 export class UseElement {
     /**
+     * Is important that the idIcon exist in the html and this should be inside of symbol tag
      * @param idIcon {String} ID of reference svg in the DOM.
      */
     constructor(idIcon) {
