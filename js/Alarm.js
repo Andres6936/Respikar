@@ -49,9 +49,10 @@ class Alarm {
     }
 
     /**
-     * @return {boolean} True if the alarm is used all days.
+     * @return {number} The number of days active in the alarm
      */
-    isAllDaysUsed() {
+    getNumberOfDaysActives() {
+        //@type {number}
         let counterOfDaysUsed = 0;
         for (let isUsed of this.daysActive.values()) {
             if (isUsed) {
@@ -59,20 +60,21 @@ class Alarm {
             }
         }
 
-        return counterOfDaysUsed === this.DAYS_FOR_WEEK;
+        return counterOfDaysUsed;
+    }
+
+    /**
+     * @return {boolean} True if the alarm is used all days.
+     */
+    isAllDaysUsed() {
+        return this.getNumberOfDaysActives() === this.DAYS_FOR_WEEK;
     }
 
     /**
      * @return {boolean} True if only are used three or less days.
      */
     isOnlyThreeDaysUsedOrLess() {
-        let counterOfDaysUsed = 0;
-        for (let isUsed of this.daysActive.values()) {
-            if (isUsed) {
-                counterOfDaysUsed += 1;
-            }
-        }
-
+        let counterOfDaysUsed = this.getNumberOfDaysActives();
         return counterOfDaysUsed > 0 && counterOfDaysUsed <= this.MINIMUM_DAYS_NEED_FOR_SHOW_THREE_LETTERS_OF_DAY;
     }
 
@@ -80,15 +82,8 @@ class Alarm {
      * @return {boolean} True if no selected days.
      */
     isAllDaysDeactivate() {
-        let counterOfDaysUsed = 0;
-        for (let isUsed of this.daysActive.values()) {
-            if (isUsed) {
-                counterOfDaysUsed += 1;
-            }
-        }
-
         // Zero days selected ?
-        return counterOfDaysUsed === 0;
+        return this.getNumberOfDaysActives() === 0;
     }
 
     createElementsDay(letter) {
