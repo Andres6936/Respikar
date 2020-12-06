@@ -3,9 +3,17 @@
 export class UseElement {
     /**
      * Is important that the idIcon exist in the html and this should be inside of symbol tag
-     * @param idIcon {String} ID of reference svg in the DOM.
+     * @param idIcon {String} ID of reference svg in the DOM. The format should be "#idIcon",
+     *  always should be present the character '#' to begin of string.
      */
     constructor(idIcon) {
+        console.assert(idIcon.startsWith('#'),
+            `The Id: ${idIcon} have a format wrong. No begin with '#'.`)
+        // idIcon always begin with the character '#', but getElementById expect that
+        // string id not have the character '#', so that is needed remove the first character
+        console.assert(document.getElementById(idIcon.substr(1)) !== null,
+            `The Id: ${idIcon} not is present in the document.`);
+
         // References for create elements svg and use
         // https://florianbrinkmann.com/en/svg-use-element-javascript-4513/
 
