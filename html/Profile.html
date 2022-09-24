@@ -12,7 +12,7 @@
     <link rel="icon" sizes="200x200" href="../img/png/Logo.png">
 </head>
 <!-- Needed for the Sticky Bottom Footer -->
-<body class="d-flex flex-column h-100 col-lg-6 mx-lg-auto" style="font-family: 'Public Sans Light', sans-serif">
+<body class="d-flex flex-column h-100 mx-lg-auto" style="font-family: 'Public Sans Light', sans-serif">
 
 <!-- The <symbol> element is used to define graphical template objects which
      can be instantiated by a <use> element.
@@ -23,7 +23,7 @@
     thus promote accessibility.
 
     Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/symbol -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="d-none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="bi-book" viewBox="0 0 16 16" fill="currentColor">
         <path fill-rule="evenodd"
               d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
@@ -99,91 +99,93 @@
             </div>
         </div>
     </nav>
+</section>
 
-    <section class="row row-cols-2">
-        <div class="col-3">
-            <img class="img-fluid mx-4" src="../img/png/Profile.png" alt="Profile"/>
+<div class="min-vh-100 bg-light">
+    <section class="container-fluid pt-3 text-center border-top">
+        <section class="row row-cols-2 border-bottom pb-3 mb-2">
+            <div class="col-3">
+                <img width="64" class="img-fluid mx-4" src="../img/png/Profile.png" alt="Profile"/>
+            </div>
+
+            <div class="col-9 text-center">
+                <p class="text-muted m-0 pt-2">Welcome,</p>
+                <h6 class="h6 font-weight-bold">Claire Underwood</h6>
+            </div>
+        </section>
+
+        <div class="row">
+            <p class="col-4 text-right">S. Marital</p>
+            <p class="col-8 text-left">Married</p>
         </div>
 
-        <div class="col-9 text-center">
-            <p class="text-muted m-0 pt-2">Welcome,</p>
-            <h6 class="h6 font-weight-bold">Claire Underwood</h6>
+        <div class="row">
+            <p class="col-4 text-right">Sex</p>
+            <p class="col-8 text-left">Feminine</p>
+        </div>
+
+        <div class="row">
+            <p class="col-4 text-right">Age</p>
+            <p class="col-8 text-left">34</p>
+        </div>
+
+        <div class="row">
+            <p class="col-4 text-right">Address</p>
+            <p class="col-8 text-left">White House</p>
+        </div>
+
+        <div class="row">
+            <p class="col-4 text-right">Country</p>
+            <p class="col-8 text-left">United States</p>
+        </div>
+
+        <div class="row">
+            <p class="col-4 text-right">City</p>
+            <p class="col-8 text-left">Washington</p>
+        </div>
+
+        <div class="row">
+            <p class="col-4 text-right">Email</p>
+            <p class="col-8 text-left">claire@underwood.gov</p>
+        </div>
+
+        <div class="row">
+            <p class="col-4 text-right">Phone</p>
+            <p class="col-8 text-left">+(888) 825 457 5687</p>
         </div>
     </section>
-</section>
 
-<section class="container-fluid pt-3 text-center bg-light border-top">
-    <div class="row">
-        <p class="col-4 text-right">S. Marital</p>
-        <p class="col-8 text-left">Married</p>
-    </div>
+    <section class="row mx-0 bg-light pt-3 pb-5" style="border-radius: 30px 0 0 0">
+        <p class="text-center text-muted">Copyright &copy; 2020. J & J</p>
+    </section>
 
-    <div class="row">
-        <p class="col-4 text-right">Sex</p>
-        <p class="col-8 text-left">Feminine</p>
-    </div>
-
-    <div class="row">
-        <p class="col-4 text-right">Age</p>
-        <p class="col-8 text-left">34</p>
-    </div>
-
-    <div class="row">
-        <p class="col-4 text-right">Address</p>
-        <p class="col-8 text-left">White House</p>
-    </div>
-
-    <div class="row">
-        <p class="col-4 text-right">Country</p>
-        <p class="col-8 text-left">United States</p>
-    </div>
-
-    <div class="row">
-        <p class="col-4 text-right">City</p>
-        <p class="col-8 text-left">Washington</p>
-    </div>
-
-    <div class="row">
-        <p class="col-4 text-right">Email</p>
-        <p class="col-8 text-left">claire@underwood.gov</p>
-    </div>
-
-    <div class="row">
-        <p class="col-4 text-right">Phone</p>
-        <p class="col-8 text-left">+(888) 825 457 5687</p>
-    </div>
-</section>
-
-<section class="row mx-0 bg-light pt-3 pb-5" style="border-radius: 30px 0 0 0">
-    <p class="text-center text-muted">Copyright &copy; 2020. J & J</p>
-</section>
-
-<!-- With the classes: <.d-block .d-sm-none> the footer will be visible only on xs.
-     Reference: Documentation Bootstrap 5 - Section: Utilities - Display-->
-<footer class="bg-light mt-auto py-2 border-top fixed-bottom d-block d-sm-none">
-    <div class="container mx-0 row row-cols-4 gx-5">
-        <a class="col text-muted" href="../index.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-                <use xlink:href="#bi-house-door"></use>
-            </svg>
-        </a>
-        <a class="col text-muted" href="Alarm.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-                <use xlink:href="#bi-bell"></use>
-            </svg>
-        </a>
-        <a class="col text-muted" href="HowTo.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-                <use xlink:href="#bi-book"></use>
-            </svg>
-        </a>
-        <a class="col" href="#">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-                <use xlink:href="#bi-gear"></use>
-            </svg>
-        </a>
-    </div>
-</footer>
+    <!-- With the classes: <.d-block .d-sm-none> the footer will be visible only on xs.
+         Reference: Documentation Bootstrap 5 - Section: Utilities - Display-->
+    <footer class="bg-light mt-auto py-2 border-top fixed-bottom d-block d-sm-none">
+        <div class="container mx-0 row row-cols-4 gx-5">
+            <a class="col text-muted" href="../index.html">
+                <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
+                    <use xlink:href="#bi-house-door"></use>
+                </svg>
+            </a>
+            <a class="col text-muted" href="Alarm.html">
+                <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
+                    <use xlink:href="#bi-bell"></use>
+                </svg>
+            </a>
+            <a class="col text-muted" href="HowTo.html">
+                <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
+                    <use xlink:href="#bi-book"></use>
+                </svg>
+            </a>
+            <a class="col" href="#">
+                <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
+                    <use xlink:href="#bi-gear"></use>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</div>
 
 <script src="../js/bootstrap.bundle.js"></script>
 </body>
