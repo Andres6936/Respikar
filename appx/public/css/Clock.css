@@ -1,0 +1,77 @@
+.analog-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    border-radius: 100%;
+    box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Then we are setting position: relative. Because we are going to absolutely
+ position everything relative to our clock <div>. All the hands and other
+ stuff. So this line is important.*/
+.wrap {
+    position: relative;
+}
+
+.hour {
+    position: absolute;
+    width: 6px;
+    margin: auto;
+    top: -27%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.minute {
+    position: absolute;
+    width: 4px;
+    margin: auto;
+    top: -38%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    transform-origin: bottom center;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.second {
+    position: absolute;
+    width: 2px;
+    margin: auto;
+    top: -26%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background: #FF4B3E;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background: white;
+    border: 2px solid #1b1b1b;
+    margin: auto;
+    z-index: 1;
+}
