@@ -1,71 +1,10 @@
+import TopNavigator from "~/layout/TopNavigator";
+
 export default function () {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Respikar
-          </a>
-          <button
-            className="navbar-toggler border-0"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbar-supported-content"
-            aria-controls="navbar-supported-content"
-            aria-expanded="false"
-            aria-label="Toggle Navigation"
-            style={{ color: "transparent" }}
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div
-            className="collapse navbar-collapse"
-            id="navbar-supported-content"
-          >
-            <ul
-              className="navbar-nav mr-auto mb-2 mb-lg-0 px-4"
-              style={{ fontSize: "0.7em" }}
-            >
-              <li className="nav-item">
-                <a className="nav-link text-uppercase" href="../index.html">
-                  <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
-                    <use xlinkHref="#bi-house-door" />
-                  </svg>
-                  <p className="ml-3 d-inline">Home</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active text-uppercase text-primary"
-                  aria-current="page"
-                  href="#"
-                >
-                  <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
-                    <use xlinkHref="#bi-bell" />
-                  </svg>
-                  <p className="ml-3 d-inline">Alarms</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-uppercase" href="Profile.html">
-                  <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
-                    <use xlinkHref="#bi-gear" />
-                  </svg>
-                  <p className="ml-3 d-inline">Profile</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-uppercase" href="HowTo.html">
-                  <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
-                    <use xlinkHref="#bi-book" />
-                  </svg>
-                  <p className="ml-3 d-inline">Manual</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <TopNavigator/>
+    
       <section className="analog-clock my-4">
         <div className="clock">
           <div className="wrap">
