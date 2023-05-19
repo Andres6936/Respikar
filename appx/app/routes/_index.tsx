@@ -19,7 +19,7 @@ const TypeUses = {
 Object.freeze(TypeUses);
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "New Remix App" }];
+  return [{ title: "Respikar" }];
 };
 
 export default function Index() {
