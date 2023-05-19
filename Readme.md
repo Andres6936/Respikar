@@ -4,12 +4,12 @@ Application designed to set alarms and display usage statistics of the inhaler b
 application are offer better control over the treatment of the respiratory diseases.
 
 <p align="center">
-    <img width="320" height="568" src="./docs/Home.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./docs/Alarm.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./docs/HowTo.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./docs/Profile.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./docs/SignIn.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./docs/SignUp.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./app/docs/Home.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./app/docs/Alarm.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./app/docs/HowTo.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./app/docs/Profile.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./app/docs/SignIn.png" alt="Screenshot"/>
+    <img width="320" height="568" src="./app/docs/SignUp.png" alt="Screenshot"/>
 </p>
 
 ### Tools
