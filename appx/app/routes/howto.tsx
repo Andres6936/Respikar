@@ -56,7 +56,7 @@ export default function () {
 
       <section
         className="container py-3"
-        style={{ backgroundImage: 'url("../img/png/BackgroundAbstract.png")' }}
+        style={{ backgroundImage: 'url("/png/BackgroundAbstract.png")' }}
       >
         <div
           className="mx-2 mt-3 p-4 text-white col-lg-4"
@@ -110,7 +110,7 @@ export default function () {
           <figure className="figure pt-4 pt-lg-0 pb-1 offset-lg-1 col-lg-4">
             <img
               className="figure-img img-fluid border"
-              src="../img/png/MDI.jpg"
+              src="/png/MDI.jpg"
               alt="Metered-Dose Inhaler"
             />
             <figcaption className="figure-caption">
@@ -131,7 +131,7 @@ export default function () {
             <figure className="figure">
               <img
                 className="figure-img img-thumbnail my-2"
-                src="../img/png/MDI-Shaken.png"
+                src="/png/MDI-Shaken.png"
                 alt="Removed and inhaler shaken"
               />
               <figcaption className="figure-caption">
@@ -144,7 +144,7 @@ export default function () {
             <figure className="figure">
               <img
                 className="figure-img img-thumbnail my-2"
-                src="../img/png/MDI-BreatheOut.png"
+                src="/png/MDI-BreatheOut.png"
                 alt="Breathe Out"
               />
               <figcaption className="figure-caption">
@@ -158,7 +158,7 @@ export default function () {
             <figure className="figure">
               <img
                 className="figure-img img-thumbnail my-2"
-                src="../img/png/MDI-BreatheSlowly.png"
+                src="/png/MDI-BreatheSlowly.png"
                 alt="Breathe Slowly"
               />
               <figcaption className="figure-caption">
@@ -172,7 +172,7 @@ export default function () {
             <figure className="figure">
               <img
                 className="figure-img img-thumbnail my-2"
-                src="../img/png/MDI-HoldBreath.png"
+                src="/png/MDI-HoldBreath.png"
                 alt="Hold Breath"
               />
               <figcaption className="figure-caption">
@@ -186,7 +186,7 @@ export default function () {
             <figure className="figure">
               <img
                 className="figure-img img-thumbnail my-2"
-                src="../img/png/MDI-SlowlyBreatheOut.png"
+                src="/png/MDI-SlowlyBreatheOut.png"
                 alt="Slowly Breathe Out"
               />
               <figcaption className="figure-caption">
