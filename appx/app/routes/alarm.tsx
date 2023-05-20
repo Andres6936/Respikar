@@ -1,21 +1,13 @@
 import TopNavigator from "~/layout/TopNavigator";
 import BottomNavigator from "~/layout/BottomNavigator";
+import Clock from "~/components/clock/Clock";
 
 export default function () {
   return (
     <>
       <TopNavigator />
+      <Clock/>
 
-      <section className="analog-clock my-4">
-        <div className="clock">
-          <div className="wrap">
-            <span className="hour" />
-            <span className="minute" />
-            <span className="second" />
-            <span className="dot" />
-          </div>
-        </div>
-      </section>
       {/* The <symbol> element is used to define graphical template objects which
      can be instantiated by a <use> element.
 
