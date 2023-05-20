@@ -1,6 +1,16 @@
-import { Link } from "@remix-run/react";
+import {Link, useLocation} from "@remix-run/react";
 
-export default function () {
+export default function TopNavigator() {
+  const location = useLocation()
+
+  const getClassIfActive = (to: string) => {
+    if (location.pathname === to) {
+      return "nav-link active text-uppercase text-primary"
+    } else {
+      return "nav-link text-uppercase"
+    }
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -26,7 +36,7 @@ export default function () {
           >
             <li className="nav-item">
               <Link
-                className="nav-link active text-uppercase text-primary"
+                className={getClassIfActive("/")}
                 aria-current="page"
                 to="/"
               >
@@ -37,7 +47,7 @@ export default function () {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-uppercase" to="/alarm">
+              <Link className={getClassIfActive("/alarm")} to="/alarm">
                 <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
                   <use xlinkHref="#bi-bell" />
                 </svg>
@@ -45,7 +55,7 @@ export default function () {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-uppercase" to="/profile">
+              <Link className={getClassIfActive("/profile")} to="/profile">
                 <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
                   <use xlinkHref="#bi-gear" />
                 </svg>
@@ -53,7 +63,7 @@ export default function () {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-uppercase" to="/howto">
+              <Link className={getClassIfActive("/howto")} to="/howto">
                 <svg viewBox="0 0 16 16" width="1.2em" height="1.2em">
                   <use xlinkHref="#bi-book" />
                 </svg>
