@@ -3,7 +3,7 @@ export default function () {
     <form className="container-fluid text-center pt-3 col-sm-6 col-md-5 col-lg-4 col-xl-3">
       <a href="../index.html">
         <img
-          src="../img/png/Logo.png"
+          src="/png/Logo.png"
           className="my-4 img-fluid"
           width="72px"
           height="72px"
