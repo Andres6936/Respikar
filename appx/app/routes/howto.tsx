@@ -1,4 +1,5 @@
 import TopNavigator from "~/layout/TopNavigator";
+import BottomNavigator from "~/layout/BottomNavigator";
 
 export default function () {
   return (
@@ -343,32 +344,8 @@ export default function () {
       >
         <p className="text-center text-muted">Copyright © 2020. J &amp; J</p>
       </section>
-      {/* With the classes: <.d-block .d-sm-none> the footer will be visible only on xs.
-     Reference: Documentation Bootstrap 5 - Section: Utilities - Display*/}
-      <footer className="bg-light mt-auto py-2 border-top fixed-bottom d-block d-sm-none">
-        <div className="container mx-0 row row-cols-4 gx-5">
-          <a className="col text-muted" href="../index.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-house-door" />
-            </svg>
-          </a>
-          <a className="col text-muted" href="Alarm.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-bell" />
-            </svg>
-          </a>
-          <a className="col" href="#">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-book" />
-            </svg>
-          </a>
-          <a className="col text-muted" href="Profile.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-gear" />
-            </svg>
-          </a>
-        </div>
-      </footer>
+
+      <BottomNavigator />
     </>
   );
 }

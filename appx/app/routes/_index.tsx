@@ -2,6 +2,7 @@ import type { V2_MetaFunction } from "@remix-run/node";
 import { useEffect } from "react";
 import RefSVG from "~/layout/RefSVG";
 import TopNavigator from "~/layout/TopNavigator";
+import BottomNavigator from "~/layout/BottomNavigator";
 
 // Enum of uses that have the inhaler
 const TypeUses = {
@@ -136,8 +137,8 @@ export default function Index() {
           background: "linear-gradient(90deg, #0c2646 0, #204065 60%, #2a5788)",
         }}
       >
-        <RefSVG/>
-        <TopNavigator/>
+        <RefSVG />
+        <TopNavigator />
 
         <h4 className="mt-4 font-weight-bold text-center text-white">
           Daily Statistics
@@ -252,30 +253,7 @@ export default function Index() {
         <p className="text-center text-muted">Copyright © 2020. J &amp; J</p>
       </section>
 
-      <footer className="bg-light mt-auto py-2 border-top fixed-bottom d-block d-sm-none">
-        <div className="container mx-0 row row-cols-4 gx-5">
-          <a className="col" href="#">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-house-door" />
-            </svg>
-          </a>
-          <a className="col text-muted" href="html/Alarm.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-bell" />
-            </svg>
-          </a>
-          <a className="col text-muted" href="html/HowTo.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-book" />
-            </svg>
-          </a>
-          <a className="col text-muted" href="html/Profile.html">
-            <svg viewBox="0 0 16 16" width="1.5em" height="1.5em">
-              <use xlinkHref="#bi-gear" />
-            </svg>
-          </a>
-        </div>
-      </footer>
+      <BottomNavigator />
     </>
   );
 }
