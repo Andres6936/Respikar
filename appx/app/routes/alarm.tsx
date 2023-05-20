@@ -1,6 +1,17 @@
+import type { LinksFunction } from "@remix-run/node";
 import TopNavigator from "~/layout/TopNavigator";
 import BottomNavigator from "~/layout/BottomNavigator";
 import Clock from "~/components/clock/Clock";
+import styles from '~/styles/Clock.css'
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+    ];
+};
 
 export default function () {
   return (
