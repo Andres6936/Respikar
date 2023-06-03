@@ -8,3 +8,7 @@ export class User {
   @Column()
   firstName: string;
 }
+
+export class UserData {
+  firstName: string
+}

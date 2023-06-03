@@ -10,7 +10,7 @@ export class UserService {
     private userRepository: Repository<User>
   ) {}
 
-  public async save(user: User): Promise<User> {
+    public async save(user: Omit<User, "id">): Promise<User> {
       return await this.userRepository.save(user);
   }
 
