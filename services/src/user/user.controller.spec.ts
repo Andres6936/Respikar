@@ -31,7 +31,12 @@ describe("UserController", () => {
   describe("root", () => {
     it("should create the user in database", async () => {
         const response: GenericResponse<string> = await userController.create({
+          email: "adan@adan.com",
+          username: "adan",
+          password: "adan",
           firstName: "Joan",
+          lastName: "Andrés",
+          createdAt: "2021-02-12 12:05:00"
         });
 
       expect(response).toHaveProperty("isBase64Encoded", false);
