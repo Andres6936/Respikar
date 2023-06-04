@@ -9,6 +9,8 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <div className="position:relative min-h:100vh max-w:100vw bg:black bg:url('/img/background/BackgroundHome.jpg') background-size:cover background-repeat:no-repeat background-position:left|45%|bottom|45%">
+      <img className="w:3em h:3em r:5px position:absolute top:15 left:15" alt="Logo Respikar" src="/png/Logo.png"/>
+
 
       <div className="flex flex:col position:absolute bottom:0 left:0 right:0  background:linear-gradient(rgba(0,0,1,0.0),rgba(0,0,1,0.9))">
         <div className="mt:5em">
