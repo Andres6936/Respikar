@@ -5,5 +5,9 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  return <div></div>;
+  return (
+    <div className="min-h:100vh bg:black bg:url('/img/background/BackgroundHome.jpg') background-size:cover background-repeat:no-repeat background-position:left|100%|bottom|45%">
+
+    </div>
+  );
 }
