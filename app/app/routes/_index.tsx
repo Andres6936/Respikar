@@ -16,7 +16,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="flex flex:3">
+        <div className="flex flex:3 bg:rgba(0,0,1,0.5) bd:blur(8px) r:43px p:0.2em">
           <div className="flex justify-content:center align-items:center bg:white fg:black w:5em h:5em r:50%">
             <SoundWave size={36} />
           </div>
