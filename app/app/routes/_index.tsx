@@ -1,4 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
+import ChevronLeft from "~/components/icons/ChevronLeft";
+import SoundWave from "~/components/icons/Soundwave";
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: "Respikar" }];
@@ -6,8 +8,18 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="min-h:100vh bg:black bg:url('/img/background/BackgroundHome.jpg') background-size:cover background-repeat:no-repeat background-position:left|95%|bottom|45%">
+    <div className="position:relative min-h:100vh bg:black bg:url('/img/background/BackgroundHome.jpg') background-size:cover background-repeat:no-repeat background-position:left|95%|bottom|45%">
+      <div className="flex flex:row align-items:center position:absolute bottom:0 px:2em py:4em gap:1em">
+        <div className="flex flex:1 justify-content:center align-items:center w:5em h:5em r:50%">
+          <ChevronLeft size={36} />
+        </div>
 
+        <div className="flex flex:3">
+          <div className="flex justify-content:center align-items:center bg:white fg:black w:5em h:5em r:50%">
+            <SoundWave size={36} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
