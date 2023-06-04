@@ -8,12 +8,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import {useState} from "react";
+import type {User} from "~/types/User";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
 export default function App() {
+  const [user, setUser] = useState<User | null>(null);
+
   return (
     <html lang="en">
       <head>
@@ -25,7 +29,7 @@ export default function App() {
         <Links />
       </head>
       <body className={"d-flex flex-column h-100 mx-lg-auto"}>
-        <Outlet />
+        <Outlet context={{user, setUser}} />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
