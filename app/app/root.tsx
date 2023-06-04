@@ -39,7 +39,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className={"flex flex:col min-h:100vh min-w:100vh"}>
+      <body className={"flex flex:col min-h:100vh min-w:100vw"}>
         <Outlet context={{user, setUser}} />
         <ScrollRestoration />
         <Scripts />

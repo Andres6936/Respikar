@@ -8,7 +8,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="position:relative min-h:100vh bg:black bg:url('/img/background/BackgroundHome.jpg') background-size:cover background-repeat:no-repeat background-position:left|95%|bottom|45%">
+    <div className="position:relative min-h:100vh max-w:100vw bg:black bg:url('/img/background/BackgroundHome.jpg') background-size:cover background-repeat:no-repeat background-position:left|45%|bottom|45%">
       <div className="flex flex:row align-items:center position:absolute bottom:0 left:0 right:0 px:2em py:4em gap:1em background:linear-gradient(rgba(0,0,1,0.0),rgba(0,0,1,0.9))">
         <div className="flex flex:1">
           <div className="flex justify-content:center align-items:center fg:white bd:blur(8px) bg:rgba(0,0,0,0.6) w:5em h:5em r:50%">
