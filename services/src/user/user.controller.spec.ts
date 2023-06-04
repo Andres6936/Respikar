@@ -3,6 +3,7 @@ import { UserController } from "./user.controller";
 import { UserService } from "./user.service";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { User } from "../entity/user.entity";
+import { GenericResponse } from "../types/generic.response";
 
 describe("UserController", () => {
   let userController: UserController;
@@ -28,12 +29,13 @@ describe("UserController", () => {
   });
 
   describe("root", () => {
-    it("should create the user in database", () => {
-      expect(
-        userController.create({
+    it("should create the user in database", async () => {
+        const response: GenericResponse<string> = await userController.create({
           firstName: "Joan",
-        })
-      ).toHaveProperty(["isBase64Encoded", "statusCode", "body"]);
+        });
+
+      expect(response).toHaveProperty("isBase64Encoded", false);
+      expect(response).toHaveProperty("statusCode", 200);
     });
   });
 });
