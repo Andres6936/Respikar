@@ -8,15 +8,26 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import {useState} from "react";
+import React, {useLayoutEffect, useState} from "react";
 import type {User} from "~/types/User";
+import {MasterCSS} from "@master/css";
+import config from '../master.css'
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
+// Suppress useLayoutEffect warnings when running outside a browser
+if (typeof window === 'undefined') {
+  React.useLayoutEffect = React.useEffect;
+}
+
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
+
+  useLayoutEffect(() => {
+    new MasterCSS(config)
+  })
 
   return (
     <html lang="en">
