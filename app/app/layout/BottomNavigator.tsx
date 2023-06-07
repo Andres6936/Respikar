@@ -11,7 +11,7 @@ export default function BottomNavigator() {
     return (
         <footer className="position:fixed flex flex:3 flex:row aling-items:center bg:rgba(0,0,1,0.2) bd:blur(8px) r:43px p:0.2em bottom:1em left:1em right:1em">
             <div className="flex justify-content:center align-items:center bg:white fg:black w:5em h:5em r:50%">
-                <SoundWave onClick={() => navigator("/signin")} size={36} />
+                <SoundWave onClick={() => navigator("/dashboard")} size={36} />
             </div>
 
             <div className={"flex flex:row flex:1 justify-content:space-around"}>
