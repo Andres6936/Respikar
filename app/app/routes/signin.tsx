@@ -51,7 +51,8 @@ export default function () {
             </div>
 
             <div className={"position:absolute bottom:0 left:2em right:2em pb:1.5em"}>
-                <button className="btn btn-lg btn-primary btn-block mb-3" type="submit">
+                <button className="btn btn-lg btn-primary btn-block mb-3" type="button"
+                        onClick={() => navigation("/dashboard")}>
                     Sign In
                 </button>
                 <Link to={"/signup"} className={"flex justify-content:center align-items:center text-decoration:none"}>
