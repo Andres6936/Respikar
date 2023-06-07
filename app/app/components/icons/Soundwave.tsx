@@ -2,7 +2,7 @@ import type {Icon} from "~/components/icons/Icon";
 
 export default function SoundWave(props: Icon) {
   return (
-    <div>
+    <div onClick={props.onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={props.size ?? 16}
