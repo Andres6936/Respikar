@@ -2,7 +2,7 @@ import type {Icon} from "~/components/icons/Icon";
 
 export default function SoundWave(props: Icon) {
   return (
-    <div onClick={props.onClick}>
+    <div onClick={props.onClick} className={"flex justify-content:center align-items:center"}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={props.size ?? 16}
