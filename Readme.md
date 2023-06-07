@@ -4,12 +4,13 @@ Application designed to set alarms and display usage statistics of the inhaler b
 application are offer better control over the treatment of the respiratory diseases.
 
 <p align="center">
-    <img width="320" height="568" src="./app/docs/Home.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./app/docs/Alarm.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./app/docs/HowTo.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./app/docs/Profile.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./app/docs/SignIn.png" alt="Screenshot"/>
-    <img width="320" height="568" src="./app/docs/SignUp.png" alt="Screenshot"/>
+ <img width="414" src="./app/docs/Index.png" alt="Screenshot"/>
+    <img width="414" src="./app/docs/Home.png" alt="Screenshot"/>
+    <img width="320" src="./app/docs/Alarm.png" alt="Screenshot"/>
+    <img width="320" src="./app/docs/HowTo.png" alt="Screenshot"/>
+    <img width="320" src="./app/docs/Profile.png" alt="Screenshot"/>
+    <img width="320" src="./app/docs/SignIn.png" alt="Screenshot"/>
+    <img width="320" src="./app/docs/SignUp.png" alt="Screenshot"/>
 </p>
 
 ### Tools
@@ -31,3 +32,5 @@ application are offer better control over the treatment of the respiratory disea
   article</b> [Here](https://www.pharmaceutical-journal.com/cpd-and-learning/learning-article/how-to-help-patients-optimise-their-inhaler-technique/20201442.article?firstPass=false)
 
 - https://www.creative-tim.com/product/now-ui-dashboard-pro?ref=popper.js.org
+
+###### Dribbble - [Jack R. for RonDesignLab](https://dribbble.com/shots/20081510-WellBeings-CBD-Inhaler-App)
