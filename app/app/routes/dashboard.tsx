@@ -6,9 +6,13 @@ export default function () {
 
     return (
         <div className={"position:relative min-h:100vh max-w:100vw bg:#D9E8EC"}>
-            <div>
-                <h1>Glad you're join us</h1>
-                <p>+</p>
+            <div className={"flex flex:row px:2em py:1em justify-content:space-between align-items:center"}>
+                <h1 className={"m:0 p:0 font:bold font-size:2.8em fg:black"}>Glad you're join us</h1>
+                <div>
+                    <div className={"flex align-items:center justify-content:center bg:#ECF4F6 w:6em h:6em r:50%"}>
+                        <p className={"font-size:3em font:bold "}>+</p>
+                    </div>
+                </div>
             </div>
 
             <div className={"position:relative flex flex:col m:1em px:2em py:1.5em r:3em bg:#BBDEAB"}>
