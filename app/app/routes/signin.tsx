@@ -1,59 +1,63 @@
+import {useNavigate} from "react-router";
+import {Link} from "@remix-run/react";
+
 export default function () {
-  return (
-    <form className="container-fluid pt-5 text-center col-sm-6 col-md-5 col-lg-4 col-xl-3">
-      <a href="../index.html">
-        <img
-          src="/png/Logo.png"
-          className="my-4 img-fluid"
-          width="72px"
-          height="72px"
-          alt="Logo R"
-        />
-      </a>
-      {/* Reference for autocomplete: https://html.spec.whatwg.org/multipage/form-
-     control-infrastructure.html#autofilling-form-controls%3A-the-autocomplet
-     e-attribute*/}
-      <h1 className="h3 mb-3 font-weight-normal">Please Sign In</h1>
-      <label htmlFor="r-input-username" className="w-100 visually-hidden">
-        Username
-      </label>
-      {/* Autocomplete: username: A username */}
-      <input
-        id="r-input-username"
-        type="text"
-        className="form-control p-2"
-        placeholder="Username"
-        autoComplete="username"
-        required=""
-        autofocus=""
-      />
-      <label htmlFor="r-input-password" className="w-100 visually-hidden">
-        Password
-      </label>
-      {/* Autocomplete: current-password: The current password for the account identified by the username field (e.g. when logging in) */}
-      <input
-        id="r-input-password"
-        type="password"
-        className="form-control p-2"
-        placeholder="Password"
-        autoComplete="current-password"
-        required=""
-      />
-      <div className="my-3">
-        <label>
-          <input
-            className="mx-2"
-            type="checkbox"
-            defaultValue="r-remember-me"
-          />
-          Remember Me
-        </label>
-      </div>
-      <button className="btn btn-lg btn-primary btn-block mb-3" type="submit">
-        Sign In
-      </button>
-      <a href="SignUp.html">Don't have an account?</a>
-      <p className="mt-5 mb-3 text-muted small">© 2020. J &amp; J</p>
-    </form>
-  );
+    const navigation = useNavigate();
+
+    return (
+        <form className="position:relative min-h:100vh max-w:100vw p:2em">
+            <div className={"flex justify-content:center align-items:center mb:1.5em"}>
+                <img
+                    onClick={() => navigation("/")}
+                    src="/png/Logo.png"
+                    className="my-4 img-fluid"
+                    width="72px"
+                    height="72px"
+                    alt="Logo R"
+                />
+            </div>
+
+
+            <h1 className="font:bold font-size:2.5em">Let's Sing you in.</h1>
+            <h2 className="font:semibold font-size:2em">Welcome back.</h2>
+            <h2 className="font:semibold font-size:2em">You've ben missed!</h2>
+
+            <div className={"flex flex:col gap:1em mt:3.5em"}>
+                <div>
+                    <label htmlFor="r-input-username" className={"font:bold font-size:1.2em pb:0.3em"}>
+                        Username
+                    </label>
+                    <input
+                        id="r-input-username"
+                        type="text"
+                        className="form-control p-2"
+                        placeholder="Username"
+                        autoComplete="username"
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="r-input-password" className={"font:bold font-size:1.2em pb:0.3em"}>
+                        Password
+                    </label>
+                    <input
+                        id="r-input-password"
+                        type="password"
+                        className="form-control p-2"
+                        placeholder="Password"
+                        autoComplete="current-password"
+                    />
+                </div>
+            </div>
+
+            <div className={"position:absolute bottom:0 left:2em right:2em pb:1.5em"}>
+                <button className="btn btn-lg btn-primary btn-block mb-3" type="submit">
+                    Sign In
+                </button>
+                <Link to={"/signup"} className={"flex justify-content:center align-items:center text-decoration:none"}>
+                    Don't have an account? <span className={"font:bold ml:0.5em"}>Register</span>
+                </Link>
+            </div>
+        </form>
+    );
 }
