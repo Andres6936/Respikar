@@ -44,7 +44,6 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <script src="/js/Chart.bundle.js"></script>
       </body>
     </html>
   );
